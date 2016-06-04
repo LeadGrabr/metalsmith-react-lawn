@@ -1,8 +1,8 @@
-var React = require('react');
-var Site = require('../global/site.jsx');
+import React from 'react'
+import Site from '../global/site'
 
-var Page = React.createClass({
-  render: function() {
+export default class Page extends React.Component {
+  render() {
     var myDate = 'no date';
     if (this.props.date) {
       myDate = this.props.date.toString();
@@ -13,8 +13,6 @@ var Page = React.createClass({
         <p>Date : {myDate}</p>
         <div dangerouslySetInnerHTML={{__html: this.props.contents}}></div>
       </Site>
-    );
+    )
   }
-});
-
-module.exports = Page;
+}

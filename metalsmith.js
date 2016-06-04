@@ -1,18 +1,18 @@
-var Metalsmith = require('metalsmith');
-var markdown = require('metalsmith-markdown');
-var permalinks = require('metalsmith-permalinks');
-var templates = require('metalsmith-react-templates');
-var fileMetadata = require('metalsmith-filemetadata');
-var dateInFile = require('metalsmith-date-in-filename');
-var branch = require('metalsmith-branch');
-var assets = require('metalsmith-assets');
-var watch = require('metalsmith-watch');
-var serve = require('metalsmith-serve');
-var fs = require('fs');
-var browserify = require('browserify');
-var babelify = require('babelify');
+import Metalsmith from 'metalsmith'
+import markdown from 'metalsmith-markdown';
+import permalinks from 'metalsmith-permalinks';
+import templates from 'metalsmith-react-templates';
+import fileMetadata from 'metalsmith-filemetadata';
+import dateInFile from 'metalsmith-date-in-filename';
+import branch from 'metalsmith-branch';
+import assets from 'metalsmith-assets';
+import watch from 'metalsmith-watch';
+import serve from 'metalsmith-serve';
+import fs from 'fs';
+import browserify from 'browserify';
+import babelify from 'babelify';
 
-var metalsmith = Metalsmith(__dirname)
+const metalsmith = Metalsmith(__dirname)
   .source('./content')
   //.use(function(files, metalsmith, done) {
   //  console.log(files);
@@ -61,7 +61,7 @@ var metalsmith = Metalsmith(__dirname)
         livereload: true,
       })
   )
-  .build(function (err, files) {
+  .build((err, files) => {
     if (err) {
       console.log('Error!');
       console.log(err);
@@ -71,8 +71,8 @@ var metalsmith = Metalsmith(__dirname)
     browserify({ debug: true })
             .transform(babelify)
             .bundle()
-            .on("error", function (err) {
-                console.log("Error: " + err.message);
+            .on("error", err => {
+                console.log(`Error: ${err.message}`);
             })
             .pipe(fs.createWriteStream('./public/bundle.js'));
   });

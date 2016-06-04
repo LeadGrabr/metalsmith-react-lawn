@@ -13,6 +13,6 @@ export default class Index extends React.Component {
         <p>Date : {myDate}</p>
         <div dangerouslySetInnerHTML={{__html: this.props.contents}}></div>
       </Site>
-    );
+    )
   }
 }

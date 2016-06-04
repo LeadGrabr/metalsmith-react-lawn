@@ -5,7 +5,7 @@
     "clean": "rm -rf public/ && mkdir public",
     "prebuild": "npm run clean",
     "build": "npm run metalsmith",
-    "metalsmith": "node metalsmith.js"
+    "metalsmith": "babel-node metalsmith.js"
   },
   "license": "MIT",
   "devDependencies": {
@@ -31,5 +31,9 @@
     "metalsmith-watch": "^1.0.2",
     "react": "^15.1.0",
     "react-dom": "^15.1.0"
+  },
+  "dependencies": {
+    "babel-cli": "^6.9.0",
+    "babel-core": "^6.9.1"
   }
 }
