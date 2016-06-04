@@ -1,19 +1,9 @@
 import React from 'react'
-import Header from '../components/header/index.jsx'
-import Footer from '../components/footer/index.jsx'
+import Header from '../components/header'
+import Footer from '../components/footer'
 
-var Site = React.createClass({
-  render: function() {
-    //var styleTags = this.props.styleFiles.map(function(styleFile, index) {
-    //  return (
-    //    <link href={styleFile} rel="stylesheet" key={index} />
-    //  );
-    //});
-    //var scriptTags = this.props.scriptFiles.map(function(scriptFile, index) {
-    //  return (
-    //    <script src={scriptFile} key={index}></script>
-    //  );
-    //});
+export default class Site extends React.Component {
+  render() {
     return (
       <div>
         <Header />
@@ -22,6 +12,4 @@ var Site = React.createClass({
       </div>
     )
   }
-});
-
-module.exports = Site;
+}
