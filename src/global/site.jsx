@@ -1,5 +1,6 @@
-var React = require('react');
-var Header = require('../components/header/index.jsx');
+import React from 'react'
+import Header from '../components/header/index.jsx'
+import Footer from '../components/footer/index.jsx'
 
 var Site = React.createClass({
   render: function() {
@@ -14,17 +15,11 @@ var Site = React.createClass({
     //  );
     //});
     return (
-      <html>
-        <head>
-          <title>{this.props.title}</title>
-          <link href="/assets/style.css" rel="stylesheet" />
-        </head>
-        
-        <body>
-          <Header />
-          {this.props.children}
-        </body>
-      </html>
+      <div>
+        <Header />
+        {this.props.children}
+        <Footer />
+      </div>
     )
   }
 });

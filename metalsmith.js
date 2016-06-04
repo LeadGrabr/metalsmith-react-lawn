@@ -8,6 +8,9 @@ var branch = require('metalsmith-branch');
 var assets = require('metalsmith-assets');
 var watch = require('metalsmith-watch');
 var serve = require('metalsmith-serve');
+var fs = require('fs');
+var browserify = require('browserify');
+var babelify = require('babelify');
 
 var metalsmith = Metalsmith(__dirname)
   .source('./content')
@@ -37,6 +40,7 @@ var metalsmith = Metalsmith(__dirname)
     ]))
     .use(templates({
       isStatic: false,
+      baseFile: 'base.html',
       directory: './src/templates',
       babel: true
     }))
@@ -64,4 +68,11 @@ var metalsmith = Metalsmith(__dirname)
       console.log(files);
       throw err;
     }
+    browserify({ debug: true })
+            .transform(babelify)
+            .bundle()
+            .on("error", function (err) {
+                console.log("Error: " + err.message);
+            })
+            .pipe(fs.createWriteStream('./public/bundle.js'));
   });
