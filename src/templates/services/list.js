@@ -3,7 +3,6 @@ import Site from '../../global/site'
 
 export default class ServicesList extends React.Component {
   render() {
-    console.log(this.props.metadata.services)
     return (
       <Site title={this.props.title}>
         <div className="hero-area">

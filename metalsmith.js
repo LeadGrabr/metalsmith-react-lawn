@@ -6,7 +6,6 @@ import fileMetadata from 'metalsmith-filemetadata'
 import dateInFile from 'metalsmith-date-in-filename'
 import branch from 'metalsmith-branch'
 import assets from 'metalsmith-assets'
-import watch from 'metalsmith-watch'
 import serve from 'metalsmith-serve'
 import fs from 'fs'
 import browserify from 'browserify'
@@ -38,7 +37,7 @@ const metalsmith = Metalsmith(__dirname)
         preserve: true,
         metadata: {
           section: 'blog',
-          rtemplate: 'post.jsx'
+          rtemplate: 'post.js'
         }
       }
     ]))
@@ -56,15 +55,6 @@ const metalsmith = Metalsmith(__dirname)
   .use(serve({
         port: 8081
   }))
-  .use(
-      watch({
-        paths: {
-          "${source}/**/*": true,
-          "${source}/../templates/**/*": true,
-        },
-        livereload: true,
-      })
-  )
   .build((err, files) => {
     if (err) {
       console.log('Error!')

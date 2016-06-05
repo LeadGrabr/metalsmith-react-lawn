@@ -4,8 +4,8 @@
   "scripts": {
     "clean": "rm -rf public/ && mkdir public",
     "prebuild": "npm run clean",
-    "build": "npm run metalsmith",
-    "metalsmith": "babel-node metalsmith.js"
+    "build": "babel-node metalsmith.js",
+    "start": "nodemon --watch content --watch src --watch assets -e js,jsx,html,json --exec \"babel-node metalsmith.js\""
   },
   "license": "MIT",
   "devDependencies": {
@@ -16,9 +16,11 @@
     "babel-preset-react": "^6.5.0",
     "babel-preset-stage-0": "^6.5.0",
     "babel-preset-stage-1": "^6.5.0",
+    "babel-watch": "^2.0.2",
     "babelify": "^7.2.0",
     "browserify": "^13.0.0",
     "metalsmith": "^2.1.0",
+    "metalsmith-assets": "^0.1.0",
     "metalsmith-branch": "0.0.4",
     "metalsmith-collections": "^0.7.0",
     "metalsmith-date-in-filename": "0.0.14",
@@ -27,8 +29,7 @@
     "metalsmith-permalinks": "^0.5.0",
     "metalsmith-react-templates": "^4.1.2",
     "metalsmith-serve": "0.0.7",
-    "metalsmith-assets": "^0.1.0",
-    "metalsmith-watch": "^1.0.2",
+    "nodemon": "^1.9.2",
     "react": "^15.1.0",
     "react-dom": "^15.1.0"
   },
