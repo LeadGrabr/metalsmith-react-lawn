@@ -8,7 +8,7 @@ export default class Header extends React.Component {
           <div className="container">
             <div className="site-logo">
               <a href="index.html">
-                <img src="images/logo.png" alt="Logo" />
+                <img src="/images/logo.png" alt="Logo" />
               </a>
             </div>
             <div className="site-tagline">Lawn &amp; Landscaping Services</div>

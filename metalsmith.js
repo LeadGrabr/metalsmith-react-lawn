@@ -1,21 +1,25 @@
 import Metalsmith from 'metalsmith'
-import markdown from 'metalsmith-markdown';
-import permalinks from 'metalsmith-permalinks';
-import templates from 'metalsmith-react-templates';
-import fileMetadata from 'metalsmith-filemetadata';
-import dateInFile from 'metalsmith-date-in-filename';
-import branch from 'metalsmith-branch';
-import assets from 'metalsmith-assets';
-import watch from 'metalsmith-watch';
-import serve from 'metalsmith-serve';
-import fs from 'fs';
-import browserify from 'browserify';
-import babelify from 'babelify';
+import markdown from 'metalsmith-markdown'
+import permalinks from 'metalsmith-permalinks'
+import templates from 'metalsmith-react-templates'
+import fileMetadata from 'metalsmith-filemetadata'
+import dateInFile from 'metalsmith-date-in-filename'
+import branch from 'metalsmith-branch'
+import assets from 'metalsmith-assets'
+import watch from 'metalsmith-watch'
+import serve from 'metalsmith-serve'
+import fs from 'fs'
+import browserify from 'browserify'
+import babelify from 'babelify'
+import metadata from 'metalsmith-metadata-directory'
 
 const metalsmith = Metalsmith(__dirname)
+  .use(metadata({
+    directory: './src/data/**/*.json'
+  }))
   .source('./content')
   //.use(function(files, metalsmith, done) {
-  //  console.log(files);
+  //  console.log(files)
   //})
   .clean(true)
   .destination('./public')
@@ -63,16 +67,16 @@ const metalsmith = Metalsmith(__dirname)
   )
   .build((err, files) => {
     if (err) {
-      console.log('Error!');
-      console.log(err);
-      console.log(files);
-      throw err;
+      console.log('Error!')
+      console.log(err)
+      console.log(files)
+      throw err
     }
     browserify({ debug: true })
             .transform(babelify)
             .bundle()
             .on("error", err => {
-                console.log(`Error: ${err.message}`);
+                console.log(`Error: ${err.message}`)
             })
-            .pipe(fs.createWriteStream('./public/bundle.js'));
-  });
+            .pipe(fs.createWriteStream('./public/bundle.js'))
+  })

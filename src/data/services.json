@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Lawn",
+    "path": "services/lawn.html",
+    "description": "Lawn care and such"
+  },
+  {
+    "title": "Trees",
+    "path": "services/trees.html",
+    "description": "trees and crud"
+  }
+]
