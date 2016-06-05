@@ -10,7 +10,7 @@ export default class Contact extends React.Component {
             <div className="container">
               {/* Breadcrumb */}
               <ol className="breadcrumb">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="/index.html">Home</a></li>
                 <li className="active">Contact</li>
               </ol>
               <h1>Contact Us</h1>
@@ -156,10 +156,8 @@ export default class Contact extends React.Component {
                   <nav role="menu">
                     <ul>
                       <li><a href="/instant-quote.html">Book a Service</a></li>
-                      <li><a href="services.html">All Services</a></li>
-                      <li><a href="faqs.html">FAQs</a></li>
-                      <li><a href="pricing.html">Our Pricing</a></li>
-                      <li><a href="projects-grid.html">Completed Projects</a></li>
+                      <li><a href="/services.html">All Services</a></li>
+                      <li><a href="/faqs.html">FAQs</a></li>
                     </ul>
                   </nav>
                 </div>
@@ -193,7 +191,6 @@ export default class Contact extends React.Component {
             </div>
           </div>
         </div>
-        <div dangerouslySetInnerHTML={{__html: this.props.contents}}></div>
       </Site>
     )
   }

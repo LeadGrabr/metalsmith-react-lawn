@@ -10,7 +10,7 @@ export default class Quote extends React.Component {
             <div className="container">
               {/* Breadcrumb */}
               <ol className="breadcrumb">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="/index.html">Home</a></li>
                 <li className="active">Book a service</li>
               </ol>
               <h1>Book a Service</h1>
@@ -196,7 +196,6 @@ export default class Quote extends React.Component {
             </div>
           </div>
         </div>
-        <div dangerouslySetInnerHTML={{__html: this.props.contents}}></div>
       </Site>
     )
   }

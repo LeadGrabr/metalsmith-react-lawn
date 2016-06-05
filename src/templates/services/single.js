@@ -1,8 +1,11 @@
 import React from 'react'
 import Site from '../../global/site'
+import classnames from 'classnames'
 
 export default class SingleService extends React.Component {
   render() {
+    const { services } = this.props.metadata
+    const currentService = this.props.service
     return (
       <Site title={this.props.title} metadata={this.props.metadata}>
         <div className="hero-area">
@@ -10,8 +13,8 @@ export default class SingleService extends React.Component {
             <div className="container">
               {/* Breadcrumb */}
               <ol className="breadcrumb">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/services.html">Services</a></li>
                 <li className="active">Fall and Spring Cleanup</li>
               </ol>
               <h1>Fall and Spring Cleanup</h1>
@@ -92,12 +95,17 @@ export default class SingleService extends React.Component {
                   <div className="widget sidebar-widget widget_custom_menu">
                     <ul>
                       <li><a href="#">All Services</a></li>
-                      <li className="active"><a href="service-single.html">Fall and Spring Cleanup</a></li>
-                      <li><a href="service-single.html">Lawn Care</a></li>
-                      <li><a href="service-single.html">Landscape Design</a></li>
-                      <li><a href="service-single.html">Plants, Flowers, Soils</a></li>
-                      <li><a href="service-single.html">Tree, Shrub, Turf</a></li>
-                      <li><a href="service-single.html">Gutter Cleaning</a></li>
+                      {services.map((service) => 
+                        <li
+                          className={
+                            classnames({
+                              'active': currentService === service.id
+                            })
+                          }
+                        >
+                          <a href={`/services/${service.path}`}>{service.title}</a>
+                        </li>
+                      )}
                     </ul>
                   </div>
                   <div className="widget sidebar-widget text_widget">

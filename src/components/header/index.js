@@ -12,7 +12,7 @@ export default class Header extends React.Component {
         <header className="site-header">
           <div className="container">
             <div className="site-logo">
-              <a href="index.html">
+              <a href="/index.html">
                 <img src="/images/logo.png" alt="Logo" />
               </a>
             </div>
@@ -50,7 +50,7 @@ export default class Header extends React.Component {
         </header>
         <div className="main-navigation">
           <div className="container">
-            <a href="/instant-quote.html" className="btn btn-primary btn-sm pull-right quote-head-btn">Book a service</a>
+            <a href="/instant-quote.html" className="btn btn-primary btn-sm pull-right quote-head-btn">Instant Quote</a>
             <ul className="pull-right social-icons">
               <li className="facebook">
                 <a href="#"><i className="fa fa-facebook-f" /></a>
@@ -72,7 +72,7 @@ export default class Header extends React.Component {
                   <a href="/about.html">About</a>
                   <ul className="sub-menu">
                     <li>
-                      <a href="instant-quote.html">Instant Quote</a>
+                      <a href="/instant-quote.html">Instant Quote</a>
                     </li>
                     <li>
                       <a href="faqs.html">FAQs</a>
@@ -84,7 +84,7 @@ export default class Header extends React.Component {
                   <ul className="sub-menu">
                     {this.props.metadata.services.map((service) => 
                       <li key={service.path}>
-                        <a href={`services/${service.path}`}>{service.title}</a>
+                        <a href={`/services/${service.path}`}>{service.title}</a>
                       </li>
                     )}
                   </ul>

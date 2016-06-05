@@ -29,7 +29,7 @@ export default class Index extends React.Component {
                       <div className="flex-caption-cell">
                         <div className="flex-caption-text">
                           <h2>Professional Gardening, Landscaping<br />&amp; Maintenance Services</h2>
-                          <a href="services.html" className="basic-link">See all services</a>
+                          <a href="/services.html" className="basic-link">See all services</a>
                         </div>
                       </div>
                     </div>
@@ -42,7 +42,7 @@ export default class Index extends React.Component {
         <div className="quote-teaser">
           <div className="container">
             <div className="quote-teaser-title">
-              <h3><i className="fa fa-info-circle accent-color" /> Request an estimate</h3>
+              <h3><i className="fa fa-info-circle accent-color" />Get an Instant Quote</h3>
             </div>
             <form method="post" id="quoteform" name="quoteform" className="quick-quote clearfix" action="mail/quote.php">
               <div className="row">
@@ -54,17 +54,14 @@ export default class Index extends React.Component {
                 </div>
                 <div className="col-md-3 col-sm-6">
                   <select name="quote-service" id="quote-service" className="form-control selectpicker">
-                    <option>Select Service</option>
-                    <option>Fall and Spring Cleanup</option>
-                    <option>Lawn Care</option>
-                    <option>Landscape Design</option>
-                    <option>Plants, Flowers, Soils</option>
-                    <option>Tree, Shrub, Turf</option>
-                    <option>Gutter Cleaning</option>
+                     <option>Select Service</option>
+                     {this.props.metadata.services.map((service) => 
+                        <option>{service.title}</option>
+                     )}
                   </select>
                 </div>
                 <div className="col-md-3 col-sm-6">
-                  <input id="quote-submit" name="quote-submit" type="submit" defaultValue="Submit" className="btn btn-primary btn-block" />
+                  <input id="quote-submit" name="quote-submit" type="submit" defaultValue="Instant Quote" className="btn btn-primary btn-block" />
                 </div>
               </div>
               <div id="Quote-message" className="accent-color" />
@@ -148,66 +145,18 @@ export default class Index extends React.Component {
               <div className="carousel-wrapper">
                 <div className="row">
                   <ul className="owl-carousel carousel-fw" id="services-slider" data-columns={4} data-autoplay data-pagination="no" data-arrows="yes" data-single-item="no" data-items-desktop={4} data-items-desktop-small={3} data-items-tablet={2} data-items-mobile={1}>
-                    <li className="item">
-                      <div className="service-grid-item grid-item format-standard">
-                        <a href="service-single.html" className="media-box"><img src="http://placehold.it/600x400&text=IMAGE+PLACEHOLDER" alt /></a>
-                        <div className="grid-item-inner">
-                          <h4><a href="service-single.html">Fall and Spring Cleanup</a></h4>
-                          <p>Vestibulum quam nisi, pretium a nibh sit amet, consectetur hendrerit mi. Aenean imperdiet lacus sit amet elit porta, et malesuada erat bibendum. Cras sed nunc massa. Quisque tempor dolor sit amet tellus malesuada...</p>
-                          <a href="service-single.html" className="more">View service details</a>
+                    {this.props.metadata.services.map((service) => 
+                      <li className="item">
+                        <div className="service-grid-item grid-item format-standard">
+                          <a href={`/services/${service.path}`} className="media-box"><img src={service.img} alt={service.title} /></a>
+                          <div className="grid-item-inner">
+                            <h4><a href={`/services/${service.path}`}>{service.title}</a></h4>
+                            <p>{service.description}...</p>
+                            <a href={`/services/${service.path}`} className="more">{service.title}</a>
+                          </div>
                         </div>
-                      </div>
-                    </li>
-                    <li className="item">
-                      <div className="service-grid-item grid-item format-standard">
-                        <a href="service-single.html" className="media-box"><img src="http://placehold.it/600x400&text=IMAGE+PLACEHOLDER" alt /></a>
-                        <div className="grid-item-inner">
-                          <h4><a href="service-single.html">Lawn Care &amp; Services</a></h4>
-                          <p>Vestibulum quam nisi, pretium a nibh sit amet, consectetur hendrerit mi. Aenean imperdiet lacus sit amet elit porta, et malesuada erat bibendum. Cras sed nunc massa. Quisque tempor dolor sit amet tellus malesuada...</p>
-                          <a href="service-single.html" className="more">View service details</a>
-                        </div>
-                      </div>
-                    </li>
-                    <li className="item">
-                      <div className="service-grid-item grid-item format-standard">
-                        <a href="service-single.html" className="media-box"><img src="http://placehold.it/600x400&text=IMAGE+PLACEHOLDER" alt /></a>
-                        <div className="grid-item-inner">
-                          <h4><a href="service-single.html">Landscape Design &amp; Installation</a></h4>
-                          <p>Vestibulum quam nisi, pretium a nibh sit amet, consectetur hendrerit mi. Aenean imperdiet lacus sit amet elit porta, et malesuada erat bibendum. Cras sed nunc massa. Quisque tempor dolor sit amet tellus malesuada...</p>
-                          <a href="service-single.html" className="more">View service details</a>
-                        </div>
-                      </div>
-                    </li>
-                    <li className="item">
-                      <div className="service-grid-item grid-item format-standard">
-                        <a href="service-single.html" className="media-box"><img src="http://placehold.it/600x400&text=IMAGE+PLACEHOLDER" alt /></a>
-                        <div className="grid-item-inner">
-                          <h4><a href="service-single.html">Plants, Flowers, Soils and Mulches</a></h4>
-                          <p>Vestibulum quam nisi, pretium a nibh sit amet, consectetur hendrerit mi. Aenean imperdiet lacus sit amet elit porta, et malesuada erat bibendum. Cras sed nunc massa. Quisque tempor dolor sit amet tellus malesuada...</p>
-                          <a href="service-single.html" className="more">View service details</a>
-                        </div>
-                      </div>
-                    </li>
-                    <li className="item">
-                      <div className="service-grid-item grid-item format-standard">
-                        <a href="service-single.html" className="media-box"><img src="http://placehold.it/600x400&text=IMAGE+PLACEHOLDER" alt /></a>
-                        <div className="grid-item-inner">
-                          <h4><a href="service-single.html">Tree, Shrub &amp; Turf</a></h4>
-                          <p>Vestibulum quam nisi, pretium a nibh sit amet, consectetur hendrerit mi. Aenean imperdiet lacus sit amet elit porta, et malesuada erat bibendum. Cras sed nunc massa. Quisque tempor dolor sit amet tellus malesuada...</p>
-                          <a href="service-single.html" className="more">View service details</a>
-                        </div>
-                      </div>
-                    </li>
-                    <li className="item">
-                      <div className="service-grid-item grid-item format-standard">
-                        <a href="service-single.html" className="media-box"><img src="http://placehold.it/600x400&text=IMAGE+PLACEHOLDER" alt /></a>
-                        <div className="grid-item-inner">
-                          <h4><a href="service-single.html">Gutter Cleaning</a></h4>
-                          <p>Vestibulum quam nisi, pretium a nibh sit amet, consectetur hendrerit mi. Aenean imperdiet lacus sit amet elit porta, et malesuada erat bibendum. Cras sed nunc massa. Quisque tempor dolor sit amet tellus malesuada...</p>
-                          <a href="service-single.html" className="more">View service details</a>
-                        </div>
-                      </div>
-                    </li>
+                      </li>
+                    )}
                   </ul>
                 </div>
               </div>
@@ -305,60 +254,6 @@ export default class Index extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="padding-tb75 accent-bg parallax-light" style={{backgroundImage: 'url(images/leaves3.png)', backgroundRepeat: 'repeat'}}>
-              <div className="container">
-                <div className="text-align-center">
-                  <h2>Recently Completed Projects</h2>
-                  <hr className="sm" />
-                </div>
-                <div className="carousel-wrapper">
-                  <div className="row">
-                    <ul className="owl-carousel carousel-fw" id="projects-slider" data-columns={4} data-autoplay data-pagination="no" data-arrows="yes" data-single-item="no" data-items-desktop={4} data-items-desktop-small={3} data-items-tablet={2} data-items-mobile={1}>
-                      <li className="item">
-                        <div className="project-grid-item format-image">
-                          <a href="http://placehold.it/600x400&text=IMAGE+PLACEHOLDER" className="media-box magnific-image">
-                            <img src="http://placehold.it/600x400&text=IMAGE+PLACEHOLDER" alt />
-                          </a>
-                          <h4><a href="single-project.html">Sunshine Garden</a></h4>
-                        </div>
-                      </li>
-                      <li className="item">
-                        <div className="project-grid-item format-image">
-                          <a href="http://placehold.it/600x400&text=IMAGE+PLACEHOLDER" className="media-box magnific-image">
-                            <img src="http://placehold.it/600x400&text=IMAGE+PLACEHOLDER" alt />
-                          </a>
-                          <h4><a href="single-project.html">Beautiful Backyard</a></h4>
-                        </div>
-                      </li>
-                      <li className="item">
-                        <div className="project-grid-item format-image">
-                          <a href="http://placehold.it/600x400&text=IMAGE+PLACEHOLDER" className="media-box magnific-image">
-                            <img src="http://placehold.it/600x400&text=IMAGE+PLACEHOLDER" alt />
-                          </a>
-                          <h4><a href="single-project.html">Wooden Mansion</a></h4>
-                        </div>
-                      </li>
-                      <li className="item">
-                        <div className="project-grid-item format-image">
-                          <a href="http://placehold.it/600x400&text=IMAGE+PLACEHOLDER" className="media-box magnific-image">
-                            <img src="http://placehold.it/600x400&text=IMAGE+PLACEHOLDER" alt />
-                          </a>
-                          <h4><a href="single-project.html">Brick Patio</a></h4>
-                        </div>
-                      </li>
-                      <li className="item">
-                        <div className="project-grid-item format-image">
-                          <a href="http://placehold.it/600x400&text=IMAGE+PLACEHOLDER" className="media-box">
-                            <img src="http://placehold.it/600x400&text=IMAGE+PLACEHOLDER" alt />
-                          </a>
-                          <h4><a href="single-project.html">Cottage with Picket Fence</a></h4>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
         {/* Site Footer */}
@@ -429,7 +324,6 @@ export default class Index extends React.Component {
             </div>
           </div>
         </div>
-        <div dangerouslySetInnerHTML={{__html: this.props.contents}}></div>
       </Site>
     )
   }
