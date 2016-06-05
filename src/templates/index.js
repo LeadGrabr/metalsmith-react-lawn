@@ -4,7 +4,7 @@ import Site from '../global/site'
 export default class Index extends React.Component {
   render() {
     return (
-      <Site title={this.props.title}>
+      <Site title={this.props.title} metadata={this.props.metadata}>
         <div className="hero-area">
           <div className="flexslider heroflex hero-slider" data-autoplay="yes" data-pagination="no" data-arrows="yes" data-style="fade" data-pause="yes">
             <ul className="slides">
@@ -15,7 +15,7 @@ export default class Index extends React.Component {
                       <div className="flex-caption-cell">
                         <div className="flex-caption-text">
                           <h2>Making your surroundings<br />beautiful for 40 years</h2>
-                          <a href="book-service.html" className="basic-link">Let's get started</a>
+                          <a href="/instant-quote.html" className="basic-link">Let's get started</a>
                         </div>
                       </div>
                     </div>
@@ -377,7 +377,7 @@ export default class Index extends React.Component {
                   <h4 className="widgettitle"><i className="fa fa-navicon" /> Quick Links</h4>
                   <nav role="menu">
                     <ul>
-                      <li><a href="book-service.html">Book a Service</a></li>
+                      <li><a href="/instant-quote.html">Book a Service</a></li>
                       <li><a href="services.html">All Services</a></li>
                       <li><a href="faqs.html">FAQs</a></li>
                       <li><a href="pricing.html">Our Pricing</a></li>
@@ -387,10 +387,7 @@ export default class Index extends React.Component {
                 </div>
               </div>
               <div className="col-md-3 col-sm-6">
-                <div className="widget footer_widget">
-                  <h4 className="widgettitle"><i className="fa fa-twitter" /> We are on Twitter</h4>
-                  <div className="twitter-widget" data-tweets-count={2} />
-                </div>
+                
               </div>
               <div className="col-md-4 col-sm-6">
                 <div className="widget footer_widget">

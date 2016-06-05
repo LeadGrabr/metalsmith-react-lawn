@@ -4,7 +4,7 @@ import Site from '../../global/site'
 export default class ServicesList extends React.Component {
   render() {
     return (
-      <Site title={this.props.title}>
+      <Site title={this.props.title} metadata={this.props.metadata}>
         <div className="hero-area">
           <div className="page-header dark">
             <div className="container">
@@ -126,7 +126,7 @@ export default class ServicesList extends React.Component {
                   <h4 className="widgettitle"><i className="fa fa-navicon" /> Quick Links</h4>
                   <nav role="menu">
                     <ul>
-                      <li><a href="book-service.html">Book a Service</a></li>
+                      <li><a href="/instant-quote.html">Book a Service</a></li>
                       <li><a href="services.html">All Services</a></li>
                       <li><a href="faqs.html">FAQs</a></li>
                       <li><a href="pricing.html">Our Pricing</a></li>

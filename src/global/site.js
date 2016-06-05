@@ -3,12 +3,16 @@ import Header from '../components/header'
 import Footer from '../components/footer'
 
 export default class Site extends React.Component {
+  static propTypes = {
+    metadata: React.PropTypes.object.isRequired
+  };
+
   render() {
     return (
       <div>
-        <Header />
+        <Header metadata={this.props.metadata}/>
         {this.props.children}
-        <Footer />
+        <Footer metadata={this.props.metadata}/>
       </div>
     )
   }

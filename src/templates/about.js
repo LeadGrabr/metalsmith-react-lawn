@@ -4,7 +4,7 @@ import Site from '../global/site'
 export default class About extends React.Component {
   render() {
     return (
-      <Site title={this.props.title}>
+      <Site title={this.props.title} metadata={this.props.metadata}>
         <div className="hero-area">
           <div className="page-header dark">
             <div className="container">
@@ -71,7 +71,7 @@ export default class About extends React.Component {
                   <div className="widget sidebar-widget widget_custom_menu">
                     <ul>
                       <li className="active"><a href="about.html">About us</a></li>
-                      <li><a href="book-service.html">Book a service</a></li>
+                      <li><a href="/instant-quote.html">Book a service</a></li>
                       <li><a href="pricing.html">Pricing</a></li>
                       <li><a href="faqs.html">Frequently asked questions</a></li>
                       <li><a href="contact.html">Contact us</a></li>

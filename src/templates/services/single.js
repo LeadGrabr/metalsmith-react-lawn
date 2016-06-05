@@ -4,7 +4,7 @@ import Site from '../../global/site'
 export default class SingleService extends React.Component {
   render() {
     return (
-      <Site title={this.props.title}>
+      <Site title={this.props.title} metadata={this.props.metadata}>
         <div className="hero-area">
           <div className="page-header" style={{backgroundImage: 'url(http://placehold.it/1400x300&text=IMAGE+PLACEHOLDER)', backgroundRepeat: 'no-repeat', backgroundPosition: 'center center'}}>
             <div className="container">

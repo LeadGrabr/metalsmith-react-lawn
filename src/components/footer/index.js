@@ -1,6 +1,11 @@
 import React from 'react'
 
 export default class Footer extends React.Component {
+  
+  static propTypes = {
+    metadata: React.PropTypes.object.isRequired
+  };
+
   render() {
     return (
       <div>
