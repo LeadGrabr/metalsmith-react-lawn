@@ -132,7 +132,7 @@ export default class Contact extends React.Component {
                   <div className="widget sidebar-widget">
                     <div className="carousel-wrapper">
                       <div className="row">
-                        <ul className="owl-carousel carousel-fw" id="testimonials-slider" data-columns={1} data-autoplay data-pagination="no" data-arrows="yes" data-single-item="no" data-items-desktop={1} data-items-desktop-small={1} data-items-tablet={1} data-items-mobile={1}>
+                        <ul className="owl-carousel carousel-fw" id="testimonials-slider" data-columns={1}  data-pagination="no" data-arrows="yes" data-single-item="no" data-items-desktop={1} data-items-desktop-small={1} data-items-tablet={1} data-items-mobile={1}>
                           <li className="item">
                             <div className="testimonial-block">
                               <blockquote>

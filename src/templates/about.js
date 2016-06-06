@@ -32,7 +32,7 @@ export default class About extends React.Component {
                   <p>Sed et dapibus erat, eget sollicitudin lacus. Etiam nec nisl nec velit iaculis ultrices. Phasellus neque arcu, rutrum ut quam et, consectetur porta libero. Morbi porttitor nunc ac ex consequat pulvinar.</p>
                   <div className="carousel-wrapper">
                     <div className="row">
-                      <ul className="owl-carousel carousel-fw" id="team-slider" data-columns={2} data-autoplay data-pagination="no" data-arrows="yes" data-single-item="no" data-items-desktop={2} data-items-desktop-small={1} data-items-tablet={1} data-items-mobile={1}>
+                      <ul className="owl-carousel carousel-fw" id="team-slider" data-columns={2}  data-pagination="no" data-arrows="yes" data-single-item="no" data-items-desktop={2} data-items-desktop-small={1} data-items-tablet={1} data-items-mobile={1}>
                         <li className="item">
                           <div className="team-grid-item grid-item format-image">
                             <a href="http://placehold.it/600x400&text=IMAGE+PLACEHOLDER" className="magnific-image media-box"><img src="http://placehold.it/600x400&text=IMAGE+PLACEHOLDER" alt /></a>
@@ -90,7 +90,7 @@ export default class About extends React.Component {
                   <div className="widget sidebar-widget">
                     <div className="carousel-wrapper">
                       <div className="row">
-                        <ul className="owl-carousel carousel-fw" id="testimonials-slider" data-columns={1} data-autoplay data-pagination="no" data-arrows="yes" data-single-item="no" data-items-desktop={1} data-items-desktop-small={1} data-items-tablet={1} data-items-mobile={1}>
+                        <ul className="owl-carousel carousel-fw" id="testimonials-slider" data-columns={1}  data-pagination="no" data-arrows="yes" data-single-item="no" data-items-desktop={1} data-items-desktop-small={1} data-items-tablet={1} data-items-mobile={1}>
                           <li className="item">
                             <div className="testimonial-block">
                               <blockquote>

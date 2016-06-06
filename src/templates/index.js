@@ -6,7 +6,7 @@ export default class Index extends React.Component {
     return (
       <Site title={this.props.title} metadata={this.props.metadata}>
         <div className="hero-area">
-          <div className="flexslider heroflex hero-slider" data-autoplay="yes" data-pagination="no" data-arrows="yes" data-style="fade" data-pause="yes">
+          <div className="flexslider heroflex hero-slider" data-pagination="no" data-arrows="yes" data-style="fade" data-pause="yes">
             <ul className="slides">
               <li className="parallax" style={{backgroundImage: 'url(http://placehold.it/1440x600&text=IMAGE+PLACEHOLDER)'}}>
                 <div className="flex-caption text-align-center">
@@ -136,7 +136,7 @@ export default class Index extends React.Component {
               </div>
               <div className="carousel-wrapper">
                 <div className="row">
-                  <ul className="owl-carousel carousel-fw" id="services-slider" data-columns={4} data-autoplay data-pagination="no" data-arrows="yes" data-single-item="no" data-items-desktop={4} data-items-desktop-small={3} data-items-tablet={2} data-items-mobile={1}>
+                  <ul className="owl-carousel carousel-fw" id="services-slider" data-columns={4} data-pagination="no" data-arrows="yes" data-single-item="no" data-items-desktop={4} data-items-desktop-small={3} data-items-tablet={2} data-items-mobile={1}>
                     {this.props.metadata.services.map((service) => 
                       <li key={service.id} className="item">
                         <div className="service-grid-item grid-item format-standard">
@@ -193,7 +193,7 @@ export default class Index extends React.Component {
                   <h4 className="widgettitle"><i className="fa fa-comment" /> Happy Clients</h4>
                   <div className="carousel-wrapper">
                     <div className="row">
-                      <ul className="owl-carousel carousel-fw" id="testimonials-slider" data-columns={1} data-autoplay data-pagination="yes" data-arrows="no" data-single-item="no" data-items-desktop={1} data-items-desktop-small={1} data-items-tablet={1} data-items-mobile={1}>
+                      <ul className="owl-carousel carousel-fw" id="testimonials-slider" data-columns={1} data-pagination="yes" data-arrows="no" data-single-item="no" data-items-desktop={1} data-items-desktop-small={1} data-items-tablet={1} data-items-mobile={1}>
                         <li className="item">
                             <div className="testimonial-block">
                                 <blockquote>
