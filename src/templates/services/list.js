@@ -27,7 +27,25 @@ export default class ServicesList extends React.Component {
                     {this.props.metadata.services.map((service) => 
                       <li key={service.path} className="col-md-4 col-sm-6 grid-item">
                         <div className="service-grid-item format-standard">
-                          <a href={`/services/${service.path}`} className="media-box"><img src={service.img} alt={service.title} /></a>
+                          <div
+                            style={{
+                              height: 165,
+                              overflow: 'hidden',
+                              marginBottom: '1rem'
+                            }}
+                          >
+                            <a
+                              href={`/services/${service.path}`}
+                              className="media-box"
+                              style={{ width: '100%' }}
+                            >
+                              <img
+                                alt={service.title}
+                                src={service.img}
+                                style={{ width: '100%' }}
+                              />
+                            </a>
+                          </div>
                           <div className="grid-item-inner">
                             <h4><a href={`/services/${service.path}`}>{service.title}</a></h4>
                             <p>{service.description}...</p>
