@@ -43,7 +43,7 @@ export default class ServicesList extends React.Component {
                     <ul>
                       <li className="active"><a href="#">All Services</a></li>
                       {this.props.metadata.services.map((service) => 
-                        <li><a href={`/services/${service.path}`}>{service.title}</a></li>
+                        <li key={service.id}><a href={`/services/${service.path}`}>{service.title}</a></li>
                       )}
                     </ul>
                   </div>
@@ -91,7 +91,7 @@ export default class ServicesList extends React.Component {
                     <select name="quote-service" id="quote-service" className="form-control selectpicker">
                        <option>Select Service</option>
                       {this.props.metadata.services.map((service) => 
-                         <option>{service.title}</option>
+                         <option key={service.id}>{service.title}</option>
                       )}
                     </select>
                     <input id="quote-submit" name="quote-submit" type="submit" defaultValue="Submit" className="btn btn-primary btn-block" />

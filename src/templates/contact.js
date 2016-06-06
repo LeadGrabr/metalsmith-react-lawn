@@ -176,12 +176,9 @@ export default class Contact extends React.Component {
                     <input name="quote-email" id="quote-email" type="email" placeholder="Your Email" className="form-control" />
                     <select name="quote-service" id="quote-service" className="form-control selectpicker">
                       <option>Select Service</option>
-                      <option>Fall and Spring Cleanup</option>
-                      <option>Lawn Care</option>
-                      <option>Landscape Design</option>
-                      <option>Plants, Flowers, Soils</option>
-                      <option>Tree, Shrub, Turf</option>
-                      <option>Gutter Cleaning</option>
+                      {this.props.metadata.services.map((service) => 
+                         <option key={service.id}>{service.title}</option>
+                      )}
                     </select>
                     <input id="quote-submit" name="quote-submit" type="submit" defaultValue="Submit" className="btn btn-primary btn-block" />
                     <div id="Quote-message" className="accent-color" />

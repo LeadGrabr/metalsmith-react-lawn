@@ -77,10 +77,6 @@ export default class Quote extends React.Component {
                         <label>Your Phone (required)</label>
                         <input type="text" name="service-phone" id="service-phone" className="form-control input-lg" />
                       </div>
-                      <div className="col-md-6 col-sm-6">
-                        <label>Your Address (required)</label>
-                        <input type="text" name="service-address" id="service-address" className="form-control input-lg" />
-                      </div>
                     </div>
                     <div className="row">
                       <div className="col-md-6 col-sm-6">
@@ -96,12 +92,10 @@ export default class Quote extends React.Component {
                       <div className="col-md-12">
                         <label>Choose services (required)</label>
                         <select name="service-type" id="service-type" className="form-control input-lg selectpicker">
-                          <option>Fall and Spring Cleanup</option>
-                          <option>Lawn Care</option>
-                          <option>Landscape Design</option>
-                          <option>Plants, Flowers, Soils</option>
-                          <option>Tree, Shrub, Turf</option>
-                          <option>Gutter Cleaning</option>
+                          <option>Select Service</option>
+                          {this.props.metadata.services.map((service) => 
+                             <option key={service.id}>{service.title}</option>
+                          )}
                         </select>
                         <label>Special Instructions</label>
                         <textarea name="service-comments" id="service-comments" className="form-control input-lg" rows={6} defaultValue={""} />

@@ -20,6 +20,7 @@
     "babelify": "^7.2.0",
     "browserify": "^13.0.0",
     "classnames": "^2.2.5",
+    "lodash": "^4.13.1",
     "metalsmith": "^2.1.0",
     "metalsmith-assets": "^0.1.0",
     "metalsmith-branch": "0.0.4",

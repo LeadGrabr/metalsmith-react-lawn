@@ -4,41 +4,47 @@
     "title": "Fall and Spring Cleanup",
     "path": "fall-and-spring-cleanup.html",
     "img": "http://placehold.it/600x400&text=IMAGE+PLACEHOLDER",
-    "description": "None"
+    "headerImg": "http://placehold.it/1400x300&text=IMAGE+PLACEHOLDER",
+    "description": "When autumn comes, and the leaves begin to fall, it hides your yard's beauty. Rediscover your landscaping with our fall and spring cleanup services."
   },
   {
     "id": 2,
     "title": "Lawn Care and Mowing Services",
     "path": "lawn-care-mowing-services.html",
     "img": "http://placehold.it/600x400&text=IMAGE+PLACEHOLDER",
-    "description": "None"
+    "headerImg": "http://placehold.it/1400x300&text=IMAGE+PLACEHOLDER",
+    "description": "Your lawn is the face of your property. Treat it with care, and you'll always make a good first impression. We mow, edge, and manicure our lawns to the finest standards."
   },
   {
     "id": 3,
     "title": "Landscape Design and Installation",
     "path": "landscape-design-installation.html",
     "img": "http://placehold.it/600x400&text=IMAGE+PLACEHOLDER",
-    "description": "None"
+    "headerImg": "http://placehold.it/1400x300&text=IMAGE+PLACEHOLDER",
+    "description": "Count on us for your next landscaping job and we promise you'll have the most outstanding property in the area."
   },
   {
     "id": 4,
     "title": "Plants, Flowers, Soils and Mulches",
     "path": "plants-flowers-soils-mulches.html",
     "img": "http://placehold.it/600x400&text=IMAGE+PLACEHOLDER",
-    "description": "None"
+    "headerImg": "http://placehold.it/1400x300&text=IMAGE+PLACEHOLDER",
+    "description": "A garden isn't a garden without plants and flowers. We provide you with a catalog of exactly the types of plants that can prosper in your soils."
   },
   {
     "id": 5,
     "title": "Tree, Shrub & Turf",
     "path": "tree-shrub-turf.html",
     "img": "http://placehold.it/600x400&text=IMAGE+PLACEHOLDER",
-    "description": "None"
+    "headerImg": "http://placehold.it/1400x300&text=IMAGE+PLACEHOLDER",
+    "description": "Whether you're looking for shrub removal, leaf cleanup, tree trimming, or just want to get rid of your tree by removing it, we have your solution."
   },
   {
     "id": 6,
     "title": "Gutter Cleaning",
     "path": "gutter-cleaning.html",
     "img": "http://placehold.it/600x400&text=IMAGE+PLACEHOLDER",
-    "description": "None"
+    "headerImg": "http://placehold.it/1400x300&text=IMAGE+PLACEHOLDER",
+    "description": "Nobody likes cleaning the gutters. Except us. And we do it well. Professional gutter cleaning means no water overflow in the spring."
   }
 ]

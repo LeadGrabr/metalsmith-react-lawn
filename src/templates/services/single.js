@@ -1,23 +1,30 @@
 import React from 'react'
 import Site from '../../global/site'
 import classnames from 'classnames'
+import _ from 'lodash'
 
 export default class SingleService extends React.Component {
+  
+  static propTypes = {
+    service: React.PropTypes.number.isRequired,
+    metadata: React.PropTypes.object.isRequired
+  };
+
   render() {
     const { services } = this.props.metadata
-    const currentService = this.props.service
+    const activeService = _.find(services, {id: this.props.service})
     return (
       <Site title={this.props.title} metadata={this.props.metadata}>
         <div className="hero-area">
-          <div className="page-header" style={{backgroundImage: 'url(http://placehold.it/1400x300&text=IMAGE+PLACEHOLDER)', backgroundRepeat: 'no-repeat', backgroundPosition: 'center center'}}>
+          <div className="page-header" style={{backgroundImage: `url(${activeService.headerImg})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center center'}}>
             <div className="container">
               {/* Breadcrumb */}
               <ol className="breadcrumb">
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="/services.html">Services</a></li>
-                <li className="active">Fall and Spring Cleanup</li>
+                <li className="active">{activeService.title}</li>
               </ol>
-              <h1>Fall and Spring Cleanup</h1>
+              <h1>{activeService.title}</h1>
             </div>
           </div>
         </div>
@@ -97,9 +104,10 @@ export default class SingleService extends React.Component {
                       <li><a href="#">All Services</a></li>
                       {services.map((service) => 
                         <li
+                          key={service.id}
                           className={
                             classnames({
-                              'active': currentService === service.id
+                              'active': activeService.id === service.id
                             })
                           }
                         >
