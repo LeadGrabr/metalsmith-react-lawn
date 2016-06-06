@@ -1,43 +1,24 @@
 import React from 'react'
 import Site from '../global/site'
+import { Slider, Slide } from '../components/parallax'
 
 export default class Index extends React.Component {
   render() {
     return (
       <Site title={this.props.title} metadata={this.props.metadata}>
         <div className="hero-area">
-          <div className="flexslider heroflex hero-slider" data-pagination="no" data-arrows="yes" data-style="fade" data-pause="yes">
-            <ul className="slides">
-              <li className="parallax" style={{backgroundImage: 'url(http://placehold.it/1440x600&text=IMAGE+PLACEHOLDER)'}}>
-                <div className="flex-caption text-align-center">
-                  <div className="container">
-                    <div className="flex-caption-table">
-                      <div className="flex-caption-cell">
-                        <div className="flex-caption-text">
-                          <h2>Making your surroundings<br />beautiful for 40 years</h2>
-                          <a href="/instant-quote.html" className="basic-link">Let's get started</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li className="parallax" style={{backgroundImage: 'url(http://placehold.it/1440x600&text=IMAGE+PLACEHOLDER)'}}>
-                <div className="flex-caption text-align-center">
-                  <div className="container">
-                    <div className="flex-caption-table">
-                      <div className="flex-caption-cell">
-                        <div className="flex-caption-text">
-                          <h2>Professional Gardening, Landscaping<br />&amp; Maintenance Services</h2>
-                          <a href="/services.html" className="basic-link">See all services</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
+          <Slider>
+            <Slide
+              background="/images/lawn-2.jpg"
+              subtitle={<a href="/services.html" className="basic-link">See all services</a>}
+              title={<h2>Professional Gardening, Landscaping<br/>& Maintenance Services</h2>}
+            />
+            <Slide
+              background="/images/lawn-1.jpg"
+              subtitle={<a href="/instant-quote.html" className="basic-link">Let's get started</a>}
+              title={<h2>Making your surroundings<br />beautiful for 40 years</h2>}
+            />
+          </Slider>
         </div>
         <div className="quote-teaser">
           <div className="container">
