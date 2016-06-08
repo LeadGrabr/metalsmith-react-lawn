@@ -1,4 +1,2 @@
 // global utilities
-module.exports = {
-  
-};
+module.exports = {}

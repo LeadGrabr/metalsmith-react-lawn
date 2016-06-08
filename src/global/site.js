@@ -7,12 +7,12 @@ export default class Site extends React.Component {
     metadata: React.PropTypes.object.isRequired
   };
 
-  render() {
+  render () {
     return (
       <div>
-        <Header metadata={this.props.metadata}/>
+        <Header metadata={this.props.metadata} />
         {this.props.children}
-        <Footer metadata={this.props.metadata}/>
+        <Footer metadata={this.props.metadata} />
       </div>
     )
   }

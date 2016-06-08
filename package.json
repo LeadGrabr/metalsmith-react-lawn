@@ -2,6 +2,7 @@
   "name": "sampleMetalsmith",
   "version": "1.0.0",
   "scripts": {
+    "lint": "standard src/**/*.js",
     "clean": "rm -rf public/ && mkdir public",
     "prebuild": "npm run clean",
     "build": "babel-node metalsmith.js",
@@ -9,9 +10,12 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@leadgrabr/lead-form": "0.0.11",
+    "autobind-decorator": "^1.3.3",
     "babel": "^6.5.2",
     "babel-core": "^6.9.1",
-    "babel-plugin-add-module-exports": "^0.1.2",
+    "babel-eslint": "^6.0.4",
+    "babel-plugin-add-module-exports": "^0.2.1",
     "babel-preset-es2015": "^6.5.0",
     "babel-preset-react": "^6.5.0",
     "babel-preset-stage-0": "^6.5.0",
@@ -20,6 +24,7 @@
     "babelify": "^7.2.0",
     "browserify": "^13.0.0",
     "classnames": "^2.2.5",
+    "joiful-react-forms": "^0.1.4",
     "lodash": "^4.13.1",
     "metalsmith": "^2.1.0",
     "metalsmith-assets": "^0.1.0",
@@ -34,12 +39,26 @@
     "nodemon": "^1.9.2",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
-    "react-owl-carousel": "^0.14.0"
+    "react-owl-carousel": "^0.14.0",
+    "rebass": "^0.2.7",
+    "reflexbox": "^1.1.2",
+    "standard": "^7.1.2"
   },
   "dependencies": {
     "babel-cli": "^6.9.0",
     "babel-core": "^6.9.1",
     "metalsmith-metadata": "0.0.4",
     "metalsmith-metadata-directory": "^0.1.1"
+  },
+  "standard": {
+    "globals": [
+      "$",
+      "If",
+      "Else",
+      "Choose",
+      "When",
+      "Otherwise"
+    ],
+    "parser": "babel-eslint"
   }
 }
