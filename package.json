@@ -6,7 +6,19 @@
     "clean": "rm -rf public/ && mkdir public",
     "prebuild": "npm run clean",
     "build": "babel-node metalsmith.js",
-    "start": "nodemon --watch content --watch src --watch assets -e js,jsx,html,json --exec \"babel-node metalsmith.js\""
+    "start": "nodemon --watch content --watch src --watch assets -e js,jsx,html,json --exec \"babel-node metalsmith.js\"",
+    "dev": "better-npm-run start-dev"
+  },
+  "betterScripts": {
+    "start-dev": {
+      "command": "npm start",
+      "env": {
+        "API_ENDPOINT": "https://6fum8khtuh.execute-api.us-east-1.amazonaws.com/dev/resource/graphql",
+        "DEVELOPMENT": true,
+        "DEVTOOLS": true,
+        "SEGMENT_KEY": "QpnsDjppKR6s5Yws7ykveZH7FeP8ixAm"
+      }
+    }
   },
   "license": "MIT",
   "devDependencies": {
@@ -22,6 +34,7 @@
     "babel-preset-stage-1": "^6.5.0",
     "babel-watch": "^2.0.2",
     "babelify": "^7.2.0",
+    "better-npm-run": "0.0.8",
     "browserify": "^13.0.0",
     "classnames": "^2.2.5",
     "joiful-react-forms": "^0.1.4",
@@ -41,6 +54,13 @@
     "react-dom": "^15.1.0",
     "react-owl-carousel": "^0.14.0",
     "rebass": "^0.2.7",
+    "redux": "^3.5.2",
+    "redux-async-connect": "^1.0.0-rc4",
+    "redux-await": "^5.0.1",
+    "redux-devtools": "^3.3.1",
+    "redux-devtools-dock-monitor": "^1.1.1",
+    "redux-devtools-log-monitor": "^1.0.11",
+    "redux-segment": "^0.7.2",
     "reflexbox": "^1.1.2",
     "standard": "^7.1.2"
   },

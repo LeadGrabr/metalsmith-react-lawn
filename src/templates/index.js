@@ -1,7 +1,8 @@
 import React from 'react'
-import Site from '../global/site'
+import Site from '../components/site'
 import { Slider, Slide } from '../components/parallax'
-import { default as LeadForm } from '@leadgrabr/lead-form'
+import { default as LeadForm } from '../components/leadForm'
+import { Flex } from 'reflexbox'
 
 export default class Index extends React.Component {
   render () {
@@ -24,9 +25,14 @@ export default class Index extends React.Component {
         <div className='quote-teaser'>
           <div className='container'>
             <div className='quote-teaser-title'>
-              <h3><i className='fa fa-info-circle accent-color' /> Get an Instant Quote</h3>
+              <h3>
+                <i className='fa fa-info-circle accent-color' />
+                &nbsp;Get an Instant Quote
+              </h3>
             </div>
-            <LeadForm />
+            <LeadForm
+              services={this.props.metadata.services}
+            />
           </div>
         </div>
         {/* Main Content */}

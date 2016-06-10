@@ -49,11 +49,11 @@ const metalsmith = Metalsmith(__dirname)
     }))
   )
   .use(assets({
-      source: './assets', // relative to the working directory
-      destination: './' // relative to the build directory
+    source: './assets', // relative to the working directory
+    destination: './' // relative to the build directory
   }))
   .use(serve({
-        port: 8081
+    port: 8081
   }))
   .build((err, files) => {
     if (err) {
@@ -63,10 +63,10 @@ const metalsmith = Metalsmith(__dirname)
       throw err
     }
     browserify({ debug: true })
-            .transform(babelify)
-            .bundle()
-            .on("error", err => {
-                console.log(`Error: ${err.message}`)
-            })
-            .pipe(fs.createWriteStream('./public/bundle.js'))
+      .transform(babelify)
+      .bundle()
+      .on("error", err => {
+        console.log(`Error: ${err.message}`)
+      })
+      .pipe(fs.createWriteStream('./public/bundle.js'))
   })

@@ -1,5 +1,5 @@
 import React from 'react'
-import Site from '../global/site'
+import Site from '../components/site'
 
 export default class Quote extends React.Component {
   render () {
