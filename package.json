@@ -32,6 +32,7 @@
     "metalsmith-react-templates": "^4.1.2",
     "metalsmith-serve": "0.0.7",
     "nodemon": "^1.9.2",
+    "object-hash": "^1.1.2",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
     "react-owl-carousel": "^0.14.0"

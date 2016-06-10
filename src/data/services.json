@@ -5,44 +5,46 @@
     "path": "fall-and-spring-cleanup.html",
     "img": "/images/rake-leaves.jpg",
     "headerImg": "http://placehold.it/1400x300&text=IMAGE+PLACEHOLDER",
-    "description": "When autumn comes, and the leaves begin to fall, it hides your yard's beauty. Rediscover your landscaping with our fall and spring cleanup services."
+    "description": "When autumn comes, and the leaves begin to fall, it hides your yard's beauty. Rediscover your landscaping with our fall and spring cleanup services.",
+    "imageTexts": [
+      {
+        "image": "/images/first.png",
+        "text": "Try to loosen up the soil. Throughout the Winter grass roots are under a lot of stress. Lawn aeration can be done using a mechanical aeration or a liquid lawn aerator. Loosening the soil by aerating your lawn reduces stress and helps the yard to spring back - pun intended. Liquid aeration opens up a path to the roots system for easier absorption of water, air, and nutrients. One proven liquid loosens clays and hard soils naturally and efficiently. Made with a grade A ground penetrate, it penetrates the soil and has humic acid which breaks down harmful pesticides and herbicides into the ground."
+      }, 
+      {
+        "image":"",
+        "text": "After using a mechanical or liquid aerator, the next thing to do is over-seed any bare spots you have in the lawn. For best results, use a thin layer of peat moss and keep the seed and seedling moist for the first four weeks. Top quality seeds are usually worth the few extra bucks because they are more drought resistant, traffic-resistant, and look nicer."
+      },
+      {
+        "image": "",
+        "text": "Lawn Thatching helps to rid of unwanted grasses, moss and dead grass material in the yard. Thatching with a power rake is ideal, but a hand rake works in a pinch as well. After removing unwanted grass thatch, the lawn can flourish and do much better"
+      },
+      {
+        "image": "",
+        "text": "Fertilization. In early Spring, we recommend a fertilizer high in nitrogen, but with little or no phosphorous. A fertilizer containing urea or other types of long lasting nitrogen may be ideal. Healthy lawns are more resistant to weeds, droughts, and pests. Long lasting fertilizers are less likely to burn your lawn. Fertilization and over seeding are a great compliment to mechanical and liquid aeration and thatching."
+      }
+    ]
   },
   {
     "id": 2,
     "title": "Lawn Care and Mowing Services",
-    "path": "lawn-care-mowing-services.html",
+    "path": "lawn-care-mowing-tips-services.html",
     "img": "/images/lawn-mowing.jpg",
     "headerImg": "http://placehold.it/1400x300&text=IMAGE+PLACEHOLDER",
     "description": "Your lawn is the face of your property. Treat it with care, and you'll always make a good first impression. We mow, edge, and manicure our lawns to the finest standards."
   },
   {
     "id": 3,
-    "title": "Landscape Design and Installation",
-    "path": "landscape-design-installation.html",
+    "title": "Fertilization and Lawn Maintenance",
+    "path": "lawn-care-fertilization-spring.html",
     "img": "/images/landscape-design.jpg",
     "headerImg": "http://placehold.it/1400x300&text=IMAGE+PLACEHOLDER",
-    "description": "Count on us for your next landscaping job and we promise you'll have the most outstanding property in the area."
+    "description": "Count on us for your next fertilization task and we promise you'll have the most outstanding property in the area."
   },
   {
     "id": 4,
-    "title": "Plants, Flowers, Soils and Mulches",
-    "path": "plants-flowers-soils-mulches.html",
-    "img": "/images/plants-flowers-soils-mulches.jpg",
-    "headerImg": "http://placehold.it/1400x300&text=IMAGE+PLACEHOLDER",
-    "description": "A garden isn't a garden without plants and flowers. We provide you with a catalog of exactly the types of plants that can prosper in your soils."
-  },
-  {
-    "id": 5,
-    "title": "Tree, Shrub & Turf",
-    "path": "tree-shrub-turf.html",
-    "img": "/images/tree-shrub-turf.jpg",
-    "headerImg": "http://placehold.it/1400x300&text=IMAGE+PLACEHOLDER",
-    "description": "Whether you're looking for shrub removal, leaf cleanup, tree trimming, or just want to get rid of your tree by removing it, we have your solution."
-  },
-  {
-    "id": 6,
-    "title": "Gutter Cleaning",
-    "path": "gutter-cleaning.html",
+    "title": "Fall Lawn Preparation",
+    "path": "fall-lawn-preparation-maintenance.html",
     "img": "/images/gutter-cleaning.jpg",
     "headerImg": "http://placehold.it/1400x300&text=IMAGE+PLACEHOLDER",
     "description": "Nobody likes cleaning the gutters. Except us. And we do it well. Professional gutter cleaning means no water overflow in the spring."
