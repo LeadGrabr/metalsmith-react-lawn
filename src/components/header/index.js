@@ -90,6 +90,16 @@ export default class Header extends React.Component {
                   </ul>
                 </li>
                 <li>
+                  <a href="services.html">Locations</a>
+                  <ul className="sub-menu">
+                    {this.props.metadata.locations.map((location) => 
+                      <li key={location.path}>
+                        <a href={`/locations/${location.path}`}>{location.title}</a>
+                      </li>
+                    )}
+                  </ul>
+                </li>
+                <li>
                   <a href="/contact.html">Contact</a>
                 </li>
               </ul>

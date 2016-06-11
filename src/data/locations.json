@@ -1,1 +1,9 @@
-[{}]
+[
+	{
+		"id": 1,
+		"path": "ann-arbor-michigan.html",
+		"title": "Ann Arbor, MI",
+		"header": "Lawn and Garden Professionals of Ann Arbor",
+		"sidebarImage": "http://placehold.it/400x480&text=IMAGE+PLACEHOLDER"
+	}
+]
