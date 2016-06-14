@@ -136,7 +136,7 @@ export default class Index extends React.Component {
             </div>
             <div className="spacer-60" />
             {/* Client Testimonials */}
-            <div className="parallax parallax1 parallax-light padding-tb75" style={{backgroundImage: 'url(http://placehold.it/1400x700&text=IMAGE+PLACEHOLDER)'}}>
+            <div className="parallax parallax1 parallax-light padding-tb75" style={{backgroundImage: 'url(/images/lawn-and-garden-professionals-of-ann-arbor-michigan.jpg)'}}>
               <div className="text-align-center">
                 <h2>Residential and Commercial property owners trust Lawn and Garden Professionals to make sure their landscaping shines<br /></h2>
                 <a href="/services.html" className="btn btn-default btn-ghost btn-light">Explore our services</a>

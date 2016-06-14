@@ -14,7 +14,7 @@ export default class SingleService extends React.Component {
   render() {
     const { services } = this.props.metadata
     const activeService = _.find(services, {id: this.props.service})
-    const { description, title, imageTexts, headerImg } = activeService
+    const { description, title, imageTexts } = activeService
     return (
       <Site title={this.props.title} metadata={this.props.metadata}>
         <div className="hero-area">
