@@ -34,12 +34,16 @@ export default class SingleLocation extends React.Component {
             <div className="container">
               <div className="row">
                 <div className="col-md-9 col-sm-7">
-                  <div>
+                  <div className="row">
                     <iframe height="100%" width="100%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2955.9003101979997!2d-83.48592568426287!3d42.19519897919835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b5a6c921aa379%3A0xc311594193f04aae!2s847+Sumpter+Rd+%23411%2C+Belleville%2C+MI+48111!5e0!3m2!1sen!2sus!4v1465663649316" height="400" frameBorder="0" style={{border:0}} allowFullScreen></iframe>
                   </div>
-                  <img src={sidebarImage} alt className="align-left" />
-                  <h2><span className="accent-color">{header}</span></h2>
-                  <p dangerouslySetInnerHTML={{__html: this.props.contents}}></p>
+                  <div className="row">
+                    <div className="col-md-8 col-sm-12 col-lg-8">
+                      <img src={sidebarImage} alt className="align-left" />
+                    </div>
+                    <h2><span className="accent-color">{header}</span></h2>
+                    <div dangerouslySetInnerHTML={{__html: this.props.contents}}></div>
+                  </div>
                 </div>
                 <div className="col-md-3 col-sm-5">
                   <div className="widget sidebar-widget widget_custom_menu">

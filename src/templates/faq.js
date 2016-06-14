@@ -8,7 +8,7 @@ export default class Faq extends React.Component {
     return (
       <Site title={this.props.title} metadata={this.props.metadata}>
         <div className="hero-area">
-          <div className="page-header" style={{backgroundImage: 'url(http://placehold.it/1400x300&text=IMAGE+PLACEHOLDER)', backgroundRepeat: 'no-repeat', backgroundPosition: 'center center'}}>
+          <div className="page-header dark">
             <div className="container">
               {/* Breadcrumb */}
               <ol className="breadcrumb">

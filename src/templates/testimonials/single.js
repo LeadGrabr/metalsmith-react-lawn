@@ -36,9 +36,15 @@ export default class TestimonialSingle extends React.Component {
             <div className="container">
               <div className="row">
                 <div className="col-md-9 col-sm-7">
-                  <img src={img} alt className="align-left" />
-                  <h2><span className="accent-color">{title}</span></h2>
-                  <p dangerouslySetInnerHTML={{__html: this.props.contents}}></p>
+                  <div className="row">
+                    <h2><span className="col-md-12 col-lg-12 col-sm-12 accent-color">{title}</span></h2>
+                  </div>
+                  <div className="row">
+                    <div className="col-md-8 col-sm-12 col-lg-8">
+                      <img src={img} alt className="align-left" />
+                    </div>
+                    <div dangerouslySetInnerHTML={{__html: this.props.contents}}></div>
+                  </div>
                 </div>
                 <div className="col-md-3 col-sm-5">
                   <div className="widget sidebar-widget widget_custom_menu">

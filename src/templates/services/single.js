@@ -18,7 +18,7 @@ export default class SingleService extends React.Component {
     return (
       <Site title={this.props.title} metadata={this.props.metadata}>
         <div className="hero-area">
-          <div className="page-header" style={{backgroundImage: `url(${headerImg})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center center'}}>
+          <div className="page-header dark">
             <div className="container">
               {/* Breadcrumb */}
               <ol className="breadcrumb">
