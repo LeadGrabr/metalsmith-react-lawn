@@ -58,7 +58,7 @@ export default class Index extends React.Component {
                   <div className="col-md-6 col-sm-6">
                     <h1 className="short">Lawn And Garden Professionals</h1>
                     <p><strong>Gardening, Landscaping and Maintenance Services</strong></p>
-                    <p><img src="http://placehold.it/900x400&text=IMAGE+PLACEHOLDER" alt /></p>
+                    <p><img src="/images/lawn-and-garden-professionals-of-ann-arbor-michigan@small.jpg" alt /></p>
                   </div>
                   <div className="spacer-40 visible-xs" />
                   <div className="col-md-6 col-sm-6">
