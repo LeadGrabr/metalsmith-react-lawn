@@ -1,5 +1,6 @@
 import React from 'react'
 import Site from '../global/site'
+import ContactInfo from '../components/common/contactinfo'
 
 export default class About extends React.Component {
   render() {
@@ -71,21 +72,13 @@ export default class About extends React.Component {
                   <div className="widget sidebar-widget widget_custom_menu">
                     <ul>
                       <li className="active"><a href="/about.html">About us</a></li>
-                      <li><a href="/instant-quote.html">Book a service</a></li>
+                      <li><a href="/instant-quote.html">Get an Instant Quote</a></li>
                       <li><a href="/faqs.html">Frequently asked questions</a></li>
                       <li><a href="/contact.html">Contact us</a></li>
                     </ul>
                   </div>
                   <div className="widget sidebar-widget text_widget">
-                    <div className="feature-block">
-                      <h5>Contact Info</h5>
-                      <p>Suite 300 Houston<br />Texas - 77042 USA</p><br />
-                      <p><strong>Call us toll free</strong><br /><span className="accent-color">1800-9090-8089</span></p><br />
-                    </div>
-                  </div>
-                  <div className="widget sidebar-widget text_widget">
-                    <a href="#" className="btn btn-primary btn-block"><i className="fa fa-file-pdf-o fa-2x" /> Download price list</a>
-                    <a href="#" className="btn btn-primary btn-block"><i className="fa fa-file-pdf-o fa-2x" /> Download brochure</a>
+                    <ContactInfo />
                   </div>
                   <div className="widget sidebar-widget">
                     <div className="carousel-wrapper">

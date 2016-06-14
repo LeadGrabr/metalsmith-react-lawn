@@ -48,5 +48,13 @@
     "img": "/images/gutter-cleaning.jpg",
     "headerImg": "http://placehold.it/1400x300&text=IMAGE+PLACEHOLDER",
     "description": "Nobody likes cleaning the gutters. Except us. And we do it well. Professional gutter cleaning means no water overflow in the spring."
+  },
+  {
+    "id": 5,
+    "title": "Tree & Shrub Planting Or Removal",
+    "path": "tree-shrub-planting-removal-landscaping.html",
+    "img": "/images/gutter-cleaning.jpg",
+    "headerImg": "http://placehold.it/1400x300&text=IMAGE+PLACEHOLDER",
+    "description": "Even if you’re quite a keen gardener, it’s wise to get professional help with tree and shrub planting. We’ll ensure you get nothing but joy from your plants and your garden"
   }
 ]

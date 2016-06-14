@@ -56,7 +56,7 @@ export default class Index extends React.Component {
               <div className="container">
                 <div className="row">
                   <div className="col-md-6 col-sm-6">
-                    <h1 className="short">Welcome to GreensKeeper</h1>
+                    <h1 className="short">Lawn And Garden Professionals</h1>
                     <p><strong>Gardening, Landscaping and Maintenance Services</strong></p>
                     <p><img src="http://placehold.it/900x400&text=IMAGE+PLACEHOLDER" alt /></p>
                   </div>
@@ -140,77 +140,6 @@ export default class Index extends React.Component {
               <div className="text-align-center">
                 <h2>Residential and Commercial property owners trust Lawn and Garden Professionals to make sure their landscaping shines<br /></h2>
                 <a href="/services.html" className="btn btn-default btn-ghost btn-light">Explore our services</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* Site Footer */}
-        <div className="site-footer">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-3 col-sm-6">
-                <div className="widget footer_widget">
-                  <h4 className="widgettitle"><i className="fa fa-info-circle" />Lawn and Garden Professionals</h4>
-                  <p><img src="images/logo.png" alt /></p>
-                  <p>The leading local landscaping and lawn care service in the Ann Arbor, Washtenaw, Canton, and Ypsilanti areas.</p>
-                </div>
-              </div>
-              <div className="col-md-2 col-sm-6">
-                <div className="widget footer_widget widget_links">
-                  <h4 className="widgettitle"><i className="fa fa-navicon" /> Quick Links</h4>
-                  <nav role="menu">
-                    <ul>
-                      <li><a href="/instant-quote.html">Get an Instant Quote</a></li>
-                      <li><a href="/services.html">All Services</a></li>
-                      <li><a href="/faqs.html">FAQs</a></li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-              <div className="col-md-3 col-sm-6">
-              </div>
-              <div className="col-md-4 col-sm-6">
-                <div className="widget footer_widget">
-                  <h4 className="widgettitle"><i className="fa fa-comment" /> Happy Clients</h4>
-                  <div className="carousel-wrapper">
-                    <div className="row">
-                      <ul className="owl-carousel carousel-fw" id="testimonials-slider" data-columns={1} data-pagination="yes" data-arrows="no" data-single-item="no" data-items-desktop={1} data-items-desktop-small={1} data-items-tablet={1} data-items-mobile={1}>
-                        <li className="item">
-                            <div className="testimonial-block">
-                                <blockquote>
-                                    <p>I used to spend a full day each year finding a landscaping service for the summer. Since finding Lawn and Garden Professionals of Ann Arbor, I haven't looked again.</p>
-                                </blockquote>
-                                <div className="testimonial-avatar">
-                                    <img src="http://placehold.it/100x100&amp;text=IMAGE+PLACEHOLDER" alt="" height="60" width="60" />
-                                </div>
-                                <div className="testimonial-info">
-                                    <div className="testimonial-info-in">
-                                        <strong>Kate</strong>
-                                        <span>Ann Arbor, MI</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li className="item">
-                            <div className="testimonial-block">
-                                <blockquote>
-                                    <p>After a storm, we had branches everywhere. Lawn and Garden Professionals of Canton helped us clean up our tree branches and get our commercial landscaping solution for life.</p>
-                                </blockquote>
-                                <div className="testimonial-avatar">
-                                    <img src="http://placehold.it/100x100&amp;text=IMAGE+PLACEHOLDER" alt="" height="60" width="60" />
-                                </div>
-                                <div className="testimonial-info">
-                                    <div className="testimonial-info-in">
-                                        <strong>William &amp; Christina</strong>
-                                        <span>Canton, MI</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

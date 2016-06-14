@@ -24,7 +24,7 @@ export default class Header extends React.Component {
                   <span className="icon-col"><i className="fa fa-map-marker" /></span>
                   <div>
                     <div>
-                      <span>Suite 300 Houston<br />Texas - 77042 USA</span>
+                      <span>847 Sumpter Road #411<br />Belleville, MI 48111</span>
                     </div>
                   </div>
                 </li>
@@ -32,7 +32,7 @@ export default class Header extends React.Component {
                   <span className="icon-col"><i className="fa fa-phone" /></span>
                   <div>
                     <div>
-                      <span><strong>Call us toll free</strong><br />1800-9090-8089</span>
+                      <span><strong>Call us NOW</strong><br /><span className="accent-color">734-786-4475</span></span>
                     </div>
                   </div>
                 </li>
@@ -40,7 +40,7 @@ export default class Header extends React.Component {
                   <span className="icon-col"><i className="fa fa-clock-o" /></span>
                   <div>
                     <div>
-                      <span><strong>Working Hours</strong><br />Mon - Sat 06:00 to 18:00</span>
+                      <span><strong>Working Hours</strong><br />Mon - Sun 6:00 AM to 8:00 PM</span>
                     </div>
                   </div>
                 </li>
@@ -69,18 +69,7 @@ export default class Header extends React.Component {
             <nav role="menu">
               <ul className="dd-menu sf-menu">
                 <li>
-                  <a href="/about.html">About</a>
-                  <ul className="sub-menu">
-                    <li>
-                      <a href="/instant-quote.html">Instant Quote</a>
-                    </li>
-                    <li>
-                      <a href="faqs.html">FAQs</a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="services.html">Services</a>
+                  <a href="/services.html">Services</a>
                   <ul className="sub-menu">
                     {this.props.metadata.services.map((service) => 
                       <li key={service.path}>
@@ -90,7 +79,7 @@ export default class Header extends React.Component {
                   </ul>
                 </li>
                 <li>
-                  <a href="services.html">Locations</a>
+                  <a href="/locations/ann-arbor-michigan.html">Locations</a>
                   <ul className="sub-menu">
                     {this.props.metadata.locations.map((location) => 
                       <li key={location.path}>
@@ -98,6 +87,22 @@ export default class Header extends React.Component {
                       </li>
                     )}
                   </ul>
+                </li>
+                <li>
+                  <a href="/faqs.html">FAQs</a>
+                </li>
+                <li>
+                  <a href="/testimonials.html">Testimonials</a>
+                  <ul className="sub-menu">
+                    {this.props.metadata.testimonials.map(({link, author, location}) => 
+                      <li key={link}>
+                        <a href={`/testimonials/${link}`}>{author} ({location})</a>
+                      </li>
+                    )}
+                  </ul>
+                </li>
+                <li>
+                  <a href="/instant-quote.html">Instant Quote</a>
                 </li>
                 <li>
                   <a href="/contact.html">Contact</a>

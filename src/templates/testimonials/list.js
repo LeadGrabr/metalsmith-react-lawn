@@ -1,30 +1,20 @@
 import React from 'react'
 import Site from '../../global/site'
-import classnames from 'classnames'
-import _ from 'lodash'
 import ContactInfo from '../../components/common/contactinfo'
 
-export default class SingleLocation extends React.Component {
-  
-  static propTypes = {
-    location: React.PropTypes.number.isRequired,
-    metadata: React.PropTypes.object.isRequired
-  };
-
+export default class Testimonials extends React.Component {
   render() {
-    const { locations } = this.props.metadata
-    const currentLocation = _.find(locations, {id: this.props.location})
-    const { title, header, sidebarImage } = currentLocation
     return (
       <Site title={this.props.title} metadata={this.props.metadata}>
         <div className="hero-area">
           <div className="page-header dark">
             <div className="container">
+              {/* Breadcrumb */}
               <ol className="breadcrumb">
                 <li><a href="/index.html">Home</a></li>
-                <li className="active">{title}</li>
+                <li className="active">Testimonials</li>
               </ol>
-              <h1>{header}</h1>
+              <h1>Testimonials</h1>
             </div>
           </div>
         </div>
@@ -34,12 +24,22 @@ export default class SingleLocation extends React.Component {
             <div className="container">
               <div className="row">
                 <div className="col-md-9 col-sm-7">
-                  <div>
-                    <iframe height="100%" width="100%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2955.9003101979997!2d-83.48592568426287!3d42.19519897919835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b5a6c921aa379%3A0xc311594193f04aae!2s847+Sumpter+Rd+%23411%2C+Belleville%2C+MI+48111!5e0!3m2!1sen!2sus!4v1465663649316" height="400" frameBorder="0" style={{border:0}} allowFullScreen></iframe>
+                  <h2>Check Out Our <span className="accent-color">Testimonials</span></h2>
+                  <div className="row">
+                    {this.props.metadata.testimonials.map(({author, img, location, link, text}) => 
+                      <div key={author} className="item col-md-6 col-sm-6 col-lg-6">
+                        <div className="team-grid-item grid-item format-image">
+                          <a href={img} className="magnific-image media-box"><img src={img} alt={text} /></a>
+                          <div className="grid-item-inner">
+                            <h3>{author}</h3>
+                            <span className="meta-data">{location}</span>
+                            <p>{text}</p>
+                            <p><a href={`/testimonials/${link}`}>Read More</a></p>
+                          </div>
+                        </div>
+                      </div>
+                    )}
                   </div>
-                  <img src={sidebarImage} alt className="align-left" />
-                  <h2><span className="accent-color">{header}</span></h2>
-                  <p dangerouslySetInnerHTML={{__html: this.props.contents}}></p>
                 </div>
                 <div className="col-md-3 col-sm-5">
                   <div className="widget sidebar-widget widget_custom_menu">
