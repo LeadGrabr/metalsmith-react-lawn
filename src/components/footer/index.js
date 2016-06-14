@@ -45,7 +45,7 @@ export default class Footer extends React.Component {
                                     <p>I used to spend a full day each year finding a landscaping service for the summer. Since finding Lawn and Garden Professionals of Ann Arbor, I haven't looked again.</p>
                                 </blockquote>
                                 <div className="testimonial-avatar">
-                                    <img src="http://placehold.it/100x100&amp;text=IMAGE+PLACEHOLDER" alt="" height="60" width="60" />
+                                    <img src="/images/kate.jpg" alt="" height="60" width="60" />
                                 </div>
                                 <div className="testimonial-info">
                                     <div className="testimonial-info-in">
@@ -61,7 +61,7 @@ export default class Footer extends React.Component {
                                     <p>After a storm, we had branches everywhere. Lawn and Garden Professionals of Canton helped us clean up our tree branches and get our commercial landscaping solution for life.</p>
                                 </blockquote>
                                 <div className="testimonial-avatar">
-                                    <img src="http://placehold.it/100x100&amp;text=IMAGE+PLACEHOLDER" alt="" height="60" width="60" />
+                                    <img src="/images/william-and-christina.jpg" alt="" height="60" width="60" />
                                 </div>
                                 <div className="testimonial-info">
                                     <div className="testimonial-info-in">
