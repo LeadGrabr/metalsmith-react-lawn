@@ -1,20 +1,32 @@
 import React from 'react'
 import Site from '../../global/site'
 import ContactInfo from '../../components/common/contactinfo'
+import _ from 'lodash'
 
 export default class TestimonialSingle extends React.Component {
+
+  static propTypes = {
+    testimonial: React.PropTypes.number.isRequired,
+    metadata: React.PropTypes.object.isRequired
+  };
+
   render() {
+    const { testimonials } = this.props.metadata
+    const { testimonial, title } = this.props
+    const testimonialObject = _.find(testimonials, {id: testimonial})
+    const { author, location, text, headline, link, img } = testimonialObject
+    const header = `${author} (${location})`
     return (
       <Site title={this.props.title} metadata={this.props.metadata}>
         <div className="hero-area">
           <div className="page-header dark">
             <div className="container">
-              {/* Breadcrumb */}
               <ol className="breadcrumb">
                 <li><a href="/index.html">Home</a></li>
-                <li className="active">Testimonials</li>
+                <li><a href="/testimonials.html">Testimonials</a></li>
+                <li className="active">{header}</li>
               </ol>
-              <h1>Testimonials</h1>
+              <h1>{header}</h1>
             </div>
           </div>
         </div>
@@ -24,22 +36,9 @@ export default class TestimonialSingle extends React.Component {
             <div className="container">
               <div className="row">
                 <div className="col-md-9 col-sm-7">
-                  <h2>Check Out Our <span className="accent-color">Testimonials</span></h2>
-                  <div className="row">
-                    {this.props.metadata.testimonials.map(({author, img, location, link, text}) => 
-                      <div key={author} className="item col-md-6 col-sm-6 col-lg-6">
-                        <div className="team-grid-item grid-item format-image">
-                          <a href={img} className="magnific-image media-box"><img src={img} alt={text} /></a>
-                          <div className="grid-item-inner">
-                            <h3>{author}</h3>
-                            <span className="meta-data">{location}</span>
-                            <p>{text}</p>
-                            <p><a href={`/testimonials/${link}`}>Read More</a></p>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-                  </div>
+                  <img src={img} alt className="align-left" />
+                  <h2><span className="accent-color">{title}</span></h2>
+                  <p dangerouslySetInnerHTML={{__html: this.props.contents}}></p>
                 </div>
                 <div className="col-md-3 col-sm-5">
                   <div className="widget sidebar-widget widget_custom_menu">
@@ -57,7 +56,7 @@ export default class TestimonialSingle extends React.Component {
               </div>
             </div>
             <div className="spacer-40" />
-            <div className="padding-tb45 shadow-row parallax-light accent-bg counters" style={{backgroundImage: 'url(images/leaves1.png)', backgroundRepeat: 'repeat'}}>
+            <div className="padding-tb45 shadow-row parallax-light accent-bg counters" style={{backgroundImage: 'url(/images/leaves1.png)', backgroundRepeat: 'repeat'}}>
               <div className="container">
                 <div className="row">
                   <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6">

@@ -1,6 +1,6 @@
 ---
 rtemplate: testimonials/single.js
-title: lawn
+title: The Best Lawn in my Neighborhood
 testimonial: 3
 ---
 

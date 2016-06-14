@@ -1,6 +1,6 @@
 ---
 rtemplate: testimonials/single.js
-title: lawn
+title: I'm Too Busy to Manage My Lawn
 testimonial: 4
 ---
 

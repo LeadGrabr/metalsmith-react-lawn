@@ -29,7 +29,7 @@ export default class Testimonials extends React.Component {
                     {this.props.metadata.testimonials.map(({author, img, location, link, text}) => 
                       <div key={author} className="item col-md-6 col-sm-6 col-lg-6">
                         <div className="team-grid-item grid-item format-image">
-                          <a href={img} className="magnific-image media-box"><img src={img} alt={text} /></a>
+                          <a href={`/testimonials/${link}`}><img src={img} alt={text} /></a>
                           <div className="grid-item-inner">
                             <h3>{author}</h3>
                             <span className="meta-data">{location}</span>
@@ -57,7 +57,7 @@ export default class Testimonials extends React.Component {
               </div>
             </div>
             <div className="spacer-40" />
-            <div className="padding-tb45 shadow-row parallax-light accent-bg counters" style={{backgroundImage: 'url(images/leaves1.png)', backgroundRepeat: 'repeat'}}>
+            <div className="padding-tb45 shadow-row parallax-light accent-bg counters" style={{backgroundImage: 'url(/images/leaves1.png)', backgroundRepeat: 'repeat'}}>
               <div className="container">
                 <div className="row">
                   <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6">

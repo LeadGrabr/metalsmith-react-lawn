@@ -73,7 +73,7 @@ export default class Index extends React.Component {
               </div>
               <div className="spacer-60" />
             </div>
-            <div className="lgray-bg" style={{backgroundImage: 'url(images/leaves1.png)', backgroundRepeat: 'repeat'}}>
+            <div className="lgray-bg" style={{backgroundImage: 'url(/images/leaves1.png)', backgroundRepeat: 'repeat'}}>
               <div className="container">
                 <h4 className="stacked-title">Why you should choose us</h4>
                 <div className="row">

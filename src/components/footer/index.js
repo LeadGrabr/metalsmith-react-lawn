@@ -15,7 +15,7 @@ export default class Footer extends React.Component {
               <div className="col-md-3 col-sm-6">
                 <div className="widget footer_widget">
                   <h4 className="widgettitle"><i className="fa fa-info-circle" />Lawn and Garden Professionals</h4>
-                  <p><img src="images/logo.png" alt /></p>
+                  <p><img src="/images/logo.png" alt /></p>
                   <p>The leading local landscaping and lawn care service in the Ann Arbor, Washtenaw, Canton, and Ypsilanti areas.</p>
                 </div>
               </div>
