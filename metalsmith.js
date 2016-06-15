@@ -27,7 +27,7 @@ const metalsmith = Metalsmith(__dirname)
     .use(markdown())
   )
   .use(sitemap({
-    hostname: 'http://www.lawnandgardenprofessionals.com',
+    hostname: 'http://lawnandgardenprofessionals.com',
     changefreq: 'weekly' 
   }))
   .use(branch('**/*.{md,html}')
