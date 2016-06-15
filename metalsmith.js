@@ -7,6 +7,7 @@ import dateInFile from 'metalsmith-date-in-filename'
 import branch from 'metalsmith-branch'
 import assets from 'metalsmith-assets'
 import serve from 'metalsmith-serve'
+import sitemap from 'metalsmith-sitemap'
 import fs from 'fs'
 import browserify from 'browserify'
 import babelify from 'babelify'
@@ -25,6 +26,10 @@ const metalsmith = Metalsmith(__dirname)
   .use(branch('**/*.md')
     .use(markdown())
   )
+  .use(sitemap({
+    hostname: 'http://www.lawnandgardenprofessionals.com',
+    changefreq: 'weekly' 
+  }))
   .use(branch('**/*.{md,html}')
     .use(dateInFile())
     //.use(permalinks({
