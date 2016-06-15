@@ -36,10 +36,6 @@ export default class Faq extends React.Component {
                       </div>
                     )}
                   </div>
-                  {/* End Accordion */}
-                  <div className="spacer-50" />
-                  <a href="/contact.html"><h3>Ask a new question</h3></a>
-                  <div className="spacer-20" />
                 </div>
                 <div className="col-md-3 col-sm-5">
                   <div className="widget sidebar-widget widget_custom_menu">
