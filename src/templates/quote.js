@@ -3,6 +3,7 @@ import Site from '../global/site'
 
 export default class Quote extends React.Component {
   render() {
+    const { metadata: { env: { audience, api } } } = this.props
     return (
       <Site title={this.props.title} metadata={this.props.metadata}>
         <div className="hero-area">
@@ -28,34 +29,33 @@ export default class Quote extends React.Component {
                   <h3>Just fill out this quick form</h3>
                   <p>We would be delighted to serve you with our services, just use the form below or choose the services you are interested in and we will be in touch with you in few hours. We’re available 7 days a week, from 6 AM to 8 PM to take your call.</p>
                   <div className="spacer-20" />
-                  <form method="post" id="book-service-form" name="book-service-form" className="book-service-form clearfix" action="mail/book-service.php">
+                  <form method="post" id="book-service-form" name="book-service-form" className="book-service-form clearfix" action={`${api}Lead`}>
+                    <input type="hidden" value={audience} name="audience" id="audience" />
                     <div className="row">
                       <div className="col-md-6 col-sm-6">
                         <label>Your Name (required)</label>
-                        <input type="text" name="service-name" id="service-name" className="form-control input-lg" />
+                        <input type="text" name="name" id="name" className="form-control input-lg" />
                       </div>
                       <div className="col-md-6 col-sm-6">
                         <label>Your Email (required)</label>
-                        <input type="email" name="service-email" id="service-email" className="form-control input-lg" />
+                        <input type="email" name="email" id="email" className="form-control input-lg" />
                       </div>
                     </div>
                     <div className="row">
                       <div className="col-md-6 col-sm-6">
                         <label>Your Phone (required)</label>
-                        <input type="text" name="service-phone" id="service-phone" className="form-control input-lg" />
+                        <input type="text" name="phone" id="phone" className="form-control input-lg" />
                       </div>
                     </div>
                     <div className="row">
                       <div className="col-md-12">
                         <label>Choose services (required)</label>
-                        <select name="service-type" id="service-type" className="form-control input-lg selectpicker">
+                        <select name="message" id="message" className="form-control input-lg selectpicker">
                           <option>Select Service</option>
                           {this.props.metadata.services.map((service) => 
                              <option key={service.id}>{service.title}</option>
                           )}
                         </select>
-                        <label>Special Instructions</label>
-                        <textarea name="service-comments" id="service-comments" className="form-control input-lg" rows={6} defaultValue={""} />
                         <button type="submit" id="service-submit" name="service-submit" className="btn btn-primary btn-lg margin-20">Book Service</button>
                       </div>
                     </div>

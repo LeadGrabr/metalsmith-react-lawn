@@ -4,6 +4,7 @@ import { Slider, Slide } from '../components/parallax'
 
 export default class Index extends React.Component {
   render() {
+    const { metadata: { env: { audience, api } } } = this.props
     return (
       <Site title={this.props.title} metadata={this.props.metadata}>
         <div className="hero-area">
@@ -22,31 +23,34 @@ export default class Index extends React.Component {
         </div>
         <div className="quote-teaser">
           <div className="container">
-            <div className="quote-teaser-title">
-              <h3><i className="fa fa-info-circle accent-color" />Get an Instant Quote</h3>
+            <div className="row">
+              <form method="post" id="quoteform" name="quoteform" className="quick-quote clearfix" action={`${api}Lead`}>
+                <input type="hidden" value={audience} name="audience" id="audience" />
+                <div className="row">
+                  <div className="col-md-3 col-sm-6">
+                    <input name="quote-name" id="quote-name" type="text" placeholder="Your Name" className="form-control" />
+                  </div>
+                  <div className="col-md-3 col-sm-6">
+                    <input name="quote-email" id="quote-email" type="email" placeholder="Your Email" className="form-control" />
+                  </div>
+                  <div className="col-md-2 col-sm-6">
+                    <input name="quote-phone" id="quote-phone" type="phone" placeholder="Phone Number" className="form-control" />
+                  </div>
+                  <div className="col-md-2 col-sm-6">
+                    <select name="quote-service" id="quote-service" className="form-control selectpicker">
+                       <option>Select Service</option>
+                       {this.props.metadata.services.map((service) => 
+                          <option key={service.id}>{service.title}</option>
+                       )}
+                    </select>
+                  </div>
+                  <div className="col-md-2 col-sm-6">
+                    <input id="quote-submit" name="quote-submit" type="submit" defaultValue="Instant Quote" className="btn btn-primary btn-block" />
+                  </div>
+                </div>
+                <div id="Quote-message" className="accent-color" />
+              </form>
             </div>
-            <form method="post" id="quoteform" name="quoteform" className="quick-quote clearfix" action="mail/quote.php">
-              <div className="row">
-                <div className="col-md-3 col-sm-6">
-                  <input name="quote-name" id="quote-name" type="text" placeholder="Your Name" className="form-control" />
-                </div>
-                <div className="col-md-3 col-sm-6">
-                  <input name="quote-email" id="quote-email" type="email" placeholder="Your Email" className="form-control" />
-                </div>
-                <div className="col-md-3 col-sm-6">
-                  <select name="quote-service" id="quote-service" className="form-control selectpicker">
-                     <option>Select Service</option>
-                     {this.props.metadata.services.map((service) => 
-                        <option key={service.id}>{service.title}</option>
-                     )}
-                  </select>
-                </div>
-                <div className="col-md-3 col-sm-6">
-                  <input id="quote-submit" name="quote-submit" type="submit" defaultValue="Instant Quote" className="btn btn-primary btn-block" />
-                </div>
-              </div>
-              <div id="Quote-message" className="accent-color" />
-            </form>
           </div>
         </div>
         {/* Main Content */}

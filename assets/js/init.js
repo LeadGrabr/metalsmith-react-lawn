@@ -13,8 +13,8 @@ var GREENSKEEPER = window.GREENSKEEPER || {};
 		
 			var action = $(this).attr('action');
 		
-			$("#message").slideUp(750,function() {
-			$('#message').hide();
+			$("#feedback").slideUp(750,function() {
+			$('#feedback').hide();
 		
 			$('#submit')
 				.after('<img src="images/assets/ajax-loader.gif" class="loader" />')
@@ -24,16 +24,15 @@ var GREENSKEEPER = window.GREENSKEEPER || {};
 				name: $('#name').val(),
 				email: $('#email').val(),
 				phone: $('#phone').val(),
-				address: $('#address').val(),
-				comments: $('#comments').val()
+				message: $('#message').val(),
+				audience: $('#audience').val()
 			},
 				function(data){
-					document.getElementById('message').innerHTML = data;
-					$('#message').slideDown('slow');
+					document.getElementById('feedback').innerHTML = data;
+					$('#feedback').slideDown('slow');
 					$('.contact-form img.loader').fadeOut('slow',function(){$(this).remove()});
 					$('#submit').removeAttr('disabled');
 					if(data.match('success') != null) $('.contact-form').slideUp('slow');
-		
 				}
 			);
 			});
@@ -59,9 +58,11 @@ var GREENSKEEPER = window.GREENSKEEPER || {};
 				.attr('disabled','disabled');
 		
 			$.post(action, {
-				quote_name: $('#quote-name').val(),
-				quote_email: $('#quote-email').val(),
-				quote_service: $('#quote-service').val()
+				name: $('#quote-name').val(),
+				email: $('#quote-email').val(),
+				phone: $('#quote-phone').val(),
+				message: $('#quote-service').val(),
+				audience: $('#audience').val()
 			},
 				function(data){
 					document.getElementById('Quote-message').innerHTML = data;
@@ -95,14 +96,11 @@ var GREENSKEEPER = window.GREENSKEEPER || {};
 				.attr('disabled','disabled');
 		
 			$.post(action, {
-				service_name: $('#service-name').val(),
-				service_email: $('#service-email').val(),
-				service_phone: $('#service-phone').val(),
-				service_address: $('#service-address').val(),
-				service_date: $('#service-date').val(),
-				service_time: $('#service-time').val(),
-				service_type: $('#service-type').val(),
-				service_comments: $('#service-comments').val()
+				name: $('#name').val(),
+				email: $('#email').val(),
+				phone: $('#phone').val(),
+				message: $('#message').val(),
+				audience: $('#audience').val()
 			},
 				function(data){
 					document.getElementById('service-message').innerHTML = data;

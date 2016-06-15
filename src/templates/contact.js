@@ -4,6 +4,7 @@ import ContactInfo from '../components/common/contactinfo'
 
 export default class Contact extends React.Component {
   render() {
+    const { metadata: { env: { audience, api } } } = this.props
     return (
       <Site title={this.props.title} metadata={this.props.metadata}>
         <div className="hero-area">
@@ -30,7 +31,8 @@ export default class Contact extends React.Component {
                   <div className="spacer-60" />
                   <h3>Get in touch</h3>
                   <p>We would be delighted to serve you with our services, just use the form below or choose the services you are interested in and we will be in touch with you in few hours. We’re available from Monday to Saturday, 06:00-18:00 to take your call.</p>
-                  <form method="post" id="contactform" name="contactform" className="contact-form clearfix" action="mail/contact.php">
+                  <form method="post" id="contactform" name="contactform" className="contact-form clearfix" action={`${api}Lead`}>
+                    <input type="hidden" value={audience} name="audience" id="audience" />
                     <div className="row">
                       <div className="col-md-6 col-sm-6">
                         <label>Your Name (required)</label>
@@ -46,21 +48,17 @@ export default class Contact extends React.Component {
                         <label>Your Phone (required)</label>
                         <input type="text" id="phone" name="phone" className="form-control input-lg" />
                       </div>
-                      <div className="col-md-6 col-sm-6">
-                        <label>Your Address</label>
-                        <input type="text" id="address" name="address" className="form-control input-lg" />
-                      </div>
                     </div>
                     <div className="row">
                       <div className="col-md-12">
                         <label>Your message</label>
-                        <textarea className="form-control input-lg" id="comments" name="comments" rows={6} defaultValue={""} />
+                        <textarea className="form-control input-lg" id="message" name="message" rows={6} defaultValue={""} />
                         <button type="submit" id="submit" name="submit" className="btn btn-primary btn-lg">Contact now</button>
                       </div>
                     </div>
                   </form>
                   <div className="clearfix" />
-                  <div id="message" />
+                  <div id="feedback" />
                 </div>
                 <div className="spacer-40 visible-xs" />
                 <div className="col-lg-3 col-md-4 col-sm-5">

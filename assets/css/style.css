@@ -1734,8 +1734,8 @@ body.boxed .is-sticky .main-navigation{
 }
 .quote-teaser form.quick-quote{
 	padding-top:30px;
-	padding-left:30px;
-	margin-left:300px;
+	// padding-left:30px;
+	// margin-left:300px;
 }
 .quote-teaser .form-control{
 	border:0;
