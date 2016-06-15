@@ -38,7 +38,7 @@ var GREENSKEEPER = window.GREENSKEEPER || {};
 					audience: $('#audience').val()
 				}),
 				success: function(data){
-					document.getElementById('feedback').innerHTML = data;
+					document.getElementById('feedback').innerHTML = "Thank You!";
 					$('#feedback').slideDown('slow');
 					$('.contact-form img.loader').fadeOut('slow',function(){$(this).remove()});
 					$('#submit').removeAttr('disabled');
@@ -85,7 +85,7 @@ var GREENSKEEPER = window.GREENSKEEPER || {};
 					audience: $('#audience').val()
 				}),
 				success: function(data){
-					document.getElementById('Quote-message').innerHTML = data;
+					document.getElementById('Quote-message').innerHTML = "Thank You!";
 					$('#Quote-message').slideDown('slow');
 					$('.quick-quote img.loader').fadeOut('slow',function(){$(this).remove()});
 					$('#quote-submit').removeAttr('disabled');
@@ -133,7 +133,7 @@ var GREENSKEEPER = window.GREENSKEEPER || {};
 					audience: $('#audience').val()
 				}),
 				success: function(data){
-					document.getElementById('service-message').innerHTML = data;
+					document.getElementById('service-message').innerHTML = "Thank You!";
 					$('#service-message').slideDown('slow');
 					$('.book-service-form img.loader').fadeOut('slow',function(){$(this).remove()});
 					$('#service-submit').removeAttr('disabled');
@@ -181,7 +181,7 @@ var GREENSKEEPER = window.GREENSKEEPER || {};
 					question_comments: $('#question-comments').val()
 				}),
 				success: function(data) {
-					document.getElementById('question-message').innerHTML = data;
+					document.getElementById('question-message').innerHTML = "Thank You!";
 					$('#question-message').slideDown('slow');
 					$('.ask-question-form img.loader').fadeOut('slow',function(){$(this).remove()});
 					$('#question-submit').removeAttr('disabled');
