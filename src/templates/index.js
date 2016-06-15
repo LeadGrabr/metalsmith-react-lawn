@@ -28,13 +28,13 @@ export default class Index extends React.Component {
                 <input type="hidden" value={audience} name="audience" id="audience" />
                 <div className="row">
                   <div className="col-md-3 col-sm-6">
-                    <input name="quote-name" id="quote-name" type="text" placeholder="Name (Req)" className="form-control" />
+                    <input name="quote-name" id="quote-name" type="text" placeholder="Name (Required)" className="form-control" />
                   </div>
                   <div className="col-md-3 col-sm-6">
-                    <input name="quote-email" id="quote-email" type="email" placeholder="Email (Req)" className="form-control" />
+                    <input name="quote-email" id="quote-email" type="email" placeholder="Email (Required)" className="form-control" />
                   </div>
                   <div className="col-md-2 col-sm-6">
-                    <input name="quote-phone" id="quote-phone" type="phone" placeholder="Phone (Req)" className="form-control" />
+                    <input name="quote-phone" id="quote-phone" type="phone" placeholder="Phone (Required)" className="form-control" />
                   </div>
                   <div className="col-md-2 col-sm-6">
                     <select name="quote-service" id="quote-service" className="form-control selectpicker">
