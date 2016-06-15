@@ -38,37 +38,8 @@ export default class Faq extends React.Component {
                   </div>
                   {/* End Accordion */}
                   <div className="spacer-50" />
-                  <h3>Ask a new question</h3>
+                  <a href="/contact.html"><h3>Ask a new question</h3></a>
                   <div className="spacer-20" />
-                  <form>
-                    <div className="row">
-                      <div className="col-md-6 col-sm-6">
-                        <label>Your Name (required)</label>
-                        <input type="text" className="form-control input-lg" />
-                      </div>
-                      <div className="col-md-6 col-sm-6">
-                        <label>Your Email (required)</label>
-                        <input type="email" className="form-control input-lg" />
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-md-6 col-sm-6">
-                        <label>Your Phone (required)</label>
-                        <input type="text" className="form-control input-lg" />
-                      </div>
-                      <div className="col-md-6 col-sm-6">
-                        <label>Your Question</label>
-                        <input type="email" className="form-control input-lg" />
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-md-12">
-                        <label>Message</label>
-                        <textarea className="form-control input-lg" rows={6} defaultValue={""} />
-                        <button type="submit" className="btn btn-primary btn-lg">Send now</button>
-                      </div>
-                    </div>
-                  </form>
                 </div>
                 <div className="col-md-3 col-sm-5">
                   <div className="widget sidebar-widget widget_custom_menu">

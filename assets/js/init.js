@@ -20,21 +20,31 @@ var GREENSKEEPER = window.GREENSKEEPER || {};
 				.after('<img src="images/assets/ajax-loader.gif" class="loader" />')
 				.attr('disabled','disabled');
 		
-			$.post(action, {
-				name: $('#name').val(),
-				email: $('#email').val(),
-				phone: $('#phone').val(),
-				message: $('#message').val(),
-				audience: $('#audience').val()
-			},
-				function(data){
+			$.ajax({
+				url: action, 
+				method: "POST",
+				beforeSend: function(xhrObj){
+			        xhrObj.setRequestHeader("Content-Type","application/json");
+			        xhrObj.setRequestHeader("Accept","application/json");
+			    },
+			    jsonp: false,
+			    dataType: "json",
+			    processData: false,
+				data: JSON.stringify({
+					name: $('#name').val(),
+					email: $('#email').val(),
+					phone: $('#phone').val(),
+					message: $('#message').val(),
+					audience: $('#audience').val()
+				}),
+				success: function(data){
 					document.getElementById('feedback').innerHTML = data;
 					$('#feedback').slideDown('slow');
 					$('.contact-form img.loader').fadeOut('slow',function(){$(this).remove()});
 					$('#submit').removeAttr('disabled');
-					if(data.match('success') != null) $('.contact-form').slideUp('slow');
+					if(data != null) $('.contact-form').slideUp('slow');
 				}
-			);
+			});
 			});
 			return false;
 		});
@@ -57,22 +67,32 @@ var GREENSKEEPER = window.GREENSKEEPER || {};
 				.after('<img src="images/assets/ring.svg" class="loader" width="22px" height="22px" />')
 				.attr('disabled','disabled');
 		
-			$.post(action, {
-				name: $('#quote-name').val(),
-				email: $('#quote-email').val(),
-				phone: $('#quote-phone').val(),
-				message: $('#quote-service').val(),
-				audience: $('#audience').val()
-			},
-				function(data){
+			$.ajax({
+				url: action, 
+				method: "POST",
+				beforeSend: function(xhrObj){
+			        xhrObj.setRequestHeader("Content-Type","application/json");
+			        xhrObj.setRequestHeader("Accept","application/json");
+			    },
+			    jsonp: false,
+			    dataType: "json",
+			    processData: false,
+				data: JSON.stringify({
+					name: $('#quote-name').val(),
+					email: $('#quote-email').val(),
+					phone: $('#quote-phone').val(),
+					message: $('#quote-service').val(),
+					audience: $('#audience').val()
+				}),
+				success: function(data){
 					document.getElementById('Quote-message').innerHTML = data;
 					$('#Quote-message').slideDown('slow');
 					$('.quick-quote img.loader').fadeOut('slow',function(){$(this).remove()});
 					$('#quote-submit').removeAttr('disabled');
-					if(data.match('success') != null) $('.quick-quote').slideUp('slow');
+					if(data != null) $('.quick-quote').slideUp('slow');
 		
 				}
-			);
+			});
 			});
 			return false;
 		});
@@ -95,22 +115,32 @@ var GREENSKEEPER = window.GREENSKEEPER || {};
 				.after('<img src="images/assets/ajax-loader.gif" class="loader" />')
 				.attr('disabled','disabled');
 		
-			$.post(action, {
-				name: $('#name').val(),
-				email: $('#email').val(),
-				phone: $('#phone').val(),
-				message: $('#message').val(),
-				audience: $('#audience').val()
-			},
-				function(data){
+			$.ajax({
+				url: action, 
+				method: "POST",
+				beforeSend: function(xhrObj){
+			        xhrObj.setRequestHeader("Content-Type","application/json");
+			        xhrObj.setRequestHeader("Accept","application/json");
+			    },
+			    jsonp: false,
+			    dataType: "json",
+			    processData: false,
+				data: JSON.stringify({
+					name: $('#name').val(),
+					email: $('#email').val(),
+					phone: $('#phone').val(),
+					message: $('#message').val(),
+					audience: $('#audience').val()
+				}),
+				success: function(data){
 					document.getElementById('service-message').innerHTML = data;
 					$('#service-message').slideDown('slow');
 					$('.book-service-form img.loader').fadeOut('slow',function(){$(this).remove()});
 					$('#service-submit').removeAttr('disabled');
-					if(data.match('success') !== null) $('.book-service-form').slideUp('slow');
+					if(data !== null) $('.book-service-form').slideUp('slow');
 		
 				}
-			);
+			});
 			});
 			return false;
 		});
@@ -133,22 +163,32 @@ var GREENSKEEPER = window.GREENSKEEPER || {};
 				.after('<img src="images/assets/ajax-loader.gif" class="loader" />')
 				.attr('disabled','disabled');
 		
-			$.post(action, {
-				question_name: $('#question-name').val(),
-				question_email: $('#question-email').val(),
-				question_phone: $('#question-phone').val(),
-				question_question: $('#question-question').val(),
-				question_comments: $('#question-comments').val()
-			},
-				function(data){
+			$.ajax({
+				url: action, 
+				method: "POST",
+				beforeSend: function(xhrObj){
+			        xhrObj.setRequestHeader("Content-Type","application/json");
+			        xhrObj.setRequestHeader("Accept","application/json");
+			    },
+			    jsonp: false,
+			    dataType: "json",
+			    processData: false,
+				data: JSON.stringify({
+					question_name: $('#question-name').val(),
+					question_email: $('#question-email').val(),
+					question_phone: $('#question-phone').val(),
+					question_question: $('#question-question').val(),
+					question_comments: $('#question-comments').val()
+				}),
+				success: function(data) {
 					document.getElementById('question-message').innerHTML = data;
 					$('#question-message').slideDown('slow');
 					$('.ask-question-form img.loader').fadeOut('slow',function(){$(this).remove()});
 					$('#question-submit').removeAttr('disabled');
-					if(data.match('success') !== null) $('.ask-question-form').slideUp('slow');
+					if(data !== null) $('.ask-question-form').slideUp('slow');
 		
 				}
-			);
+			});
 			});
 			return false;
 		});
