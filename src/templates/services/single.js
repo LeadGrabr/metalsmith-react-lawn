@@ -14,7 +14,7 @@ export default class SingleService extends React.Component {
   render() {
     const { services } = this.props.metadata
     const activeService = _.find(services, {id: this.props.service})
-    const { description, title, imageTexts } = activeService
+    const { description, img, title, imageTexts } = activeService
     return (
       <Site title={this.props.title} metadata={this.props.metadata}>
         <div className="hero-area">
@@ -38,7 +38,12 @@ export default class SingleService extends React.Component {
                 <div className="col-md-9 col-sm-8">
                   <p className="lead">{description}</p>
                   <hr />
-                  <div dangerouslySetInnerHTML={{__html: this.props.contents}}></div>
+                  <div className="row">
+                    <div className="col-md-8 col-sm-12 col-lg-8">
+                      <img src={`${img}.jpg`} alt className="align-left" />
+                    </div>
+                    <div dangerouslySetInnerHTML={{__html: this.props.contents}}></div>
+                  </div>
                   <div className="spacer-60" />
                   <div className="row">
                     {imageTexts && imageTexts.map(({image, text}) => 

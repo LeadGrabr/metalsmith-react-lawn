@@ -125,7 +125,7 @@ export default class Index extends React.Component {
                     {this.props.metadata.services.map((service) => 
                       <li key={service.id} className="item">
                         <div className="service-grid-item grid-item format-standard">
-                          <a href={`/services/${service.path}`} className="media-box"><img src={service.img} alt={service.title} /></a>
+                          <a href={`/services/${service.path}`} className="media-box"><img src={`${service.img}-thumb.jpg`} alt={service.title} /></a>
                           <div className="grid-item-inner">
                             <h4><a href={`/services/${service.path}`}>{service.title}</a></h4>
                             <p>{service.description}...</p>
