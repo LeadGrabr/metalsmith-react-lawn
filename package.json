@@ -5,7 +5,9 @@
     "clean": "rm -rf public/ && mkdir public",
     "prebuild": "npm run clean",
     "build": "babel-node metalsmith.js",
-    "start": "nodemon --watch content --watch src --watch assets -e js,jsx,html,md,json --exec \"babel-node metalsmith.js\""
+    "start": "nodemon --watch content --watch src --watch assets -e js,jsx,html,md,json --exec \"babel-node metalsmith.js\"",
+    "deploy": "aws s3 sync ./public s3://lawnandgardenprofessionals.com --exclude '.DS_Store' --profile leadgrabr --cache-control 'max-age=180' --expires 'Fri, 20 Dec 2017 16:00:00 GMT'",
+    "invalidate": "aws cloudfront create-invalidation --distribution-id EO4OZ8CUWG307 --invalidation-batch '{\"Paths\": {\"Quantity\": 1,\"Items\": [\"/*\"]},\"CallerReference\": \"string\"}' --profile leadgrabr"
   },
   "license": "MIT",
   "devDependencies": {
